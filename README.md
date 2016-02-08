@@ -1,2 +1,2 @@
 # NextLevel App
-Flask based app. Run main.py.
+Flask based app. Run app.py.
