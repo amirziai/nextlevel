@@ -87,10 +87,10 @@ def reset():
     return 'Done'
 
 if __name__ == '__main__':
-	# try:
-	# 	port = int(sys.argv[1])
-	# except:
-	# 	port = 80
+    try:
+    	port = int(sys.argv[1])
+    except:
+    	port = 80
 
     app.run()
     # app.run(host='0.0.0.0', port=port, debug=True)
