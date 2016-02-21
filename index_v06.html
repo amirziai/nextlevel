@@ -260,10 +260,7 @@
 									title = null;
 								}
 
-								if ('title' in options_movement[opt]) {
-									val += '<tr style="background-color:#ADD8E6"><td colspan="3">' + options_movement[opt]['title'] + '</td></tr>';
-								}
-								else {
+								if ('belt' in options_movement[opt]) {
 									opt_score = options_movement[opt]['belt'];
 									opt_int = parseInt(opt_score);
 									opt_stripe = Math.round(10 * (opt_score - opt_int));
