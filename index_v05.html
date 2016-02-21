@@ -179,11 +179,18 @@
 				}
 				else {
 					c = 0;
+					d = 0;
 
 					for (datum in data) {
 						val = data[datum];
 						if (val == belt && val < 7) {
 							txt += 'Work on ' + movements[c] + '<br>';
+
+							if (d > 1) {
+								break;
+							}
+
+							d += 1;
 						}
 
 						c += 1;
