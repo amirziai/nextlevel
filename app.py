@@ -7,7 +7,7 @@ from functools import update_wrapper
 import copy
 
 # flask app
-current_version = '05'
+current_version = '04'
 app = Flask(__name__)
 app.secret_key = 'F!12Z@r47j\3yXm J xu&R~>X@H!j<<mM]Lwf/,?KXTxQ!'
 
