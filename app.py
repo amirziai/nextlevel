@@ -7,7 +7,7 @@ from functools import update_wrapper
 import copy
 
 # flask app
-current_version = '04'
+current_version = '05'
 app = Flask(__name__)
 app.secret_key = 'F!12Z@r47j\3yXm J xu&R~>X@H!j<<mM]Lwf/,?KXTxQ!'
 
@@ -75,10 +75,7 @@ def crossdomain(origin=None, methods=None, headers=None,
 @app.route('/', methods=['GET'])
 @crossdomain(origin='*', headers="*", automatic_options=True)
 def home():
-    if 'email' in session:
-        return send_from_directory('.', 'index_v%s.html' % current_version)
-    else:
-        return send_from_directory('login.html' % current_version)        
+    return send_from_directory('.', 'index_v%s.html' % current_version)
 
 
 @app.route('/options', methods=['GET'])
