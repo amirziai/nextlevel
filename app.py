@@ -153,9 +153,14 @@ def log():
 @crossdomain(origin='*', headers="*", automatic_options=True)
 def reset(pw):
     if pw == 'Xa928x<2!X!-_21a+x1KA@h':
-        db.users.remove()
-        db.users.create_index('email')
-        db.users_log.create_index('users_log')
+        # db.users.remove()
+        # db.users.create_index('email')
+        # db.users_log.create_index('users_log')
+
+        user = db.users.find_one({'email': 'test@test.com'})
+        user_ = copy.deepcopy(user)
+        user_['data'] = [0] * 15
+        db.users.replace_one(user, user_)
 
         return 'Success'
     else:
