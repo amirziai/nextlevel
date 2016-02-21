@@ -1,0 +1,401 @@
+<html>
+	<head>
+		<title>NextLevel</title>
+		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<!-- <script type="text/javascript" src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" src="//cdn.datatables.net/1.10.9/css/jquery.dataTables.miƒn.css"> 
+		<link rel="stylesheet" src="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css"> -->
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- data -->
+		<script src="options"></script>
+
+
+		<script type="text/javascript">
+			function getParameterByName(name, url) {
+			    if (!url) url = window.location.href;
+			    name = name.replace(/[\[\]]/g, "\\$&");
+			    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			        results = regex.exec(url);
+			    if (!results) return null;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+
+			Array.prototype.min = function() {
+			  return Math.min.apply(null, this);
+			};
+
+			Array.prototype.max = function() {
+			  return Math.max.apply(null, this);
+			};
+
+			String.prototype.capitalize = function() {
+			    return this.charAt(0).toUpperCase() + this.slice(1);
+			}
+
+			function step(step) {
+				if (step == 1) {
+					$("#step1").hide();
+					$("#step2").show();
+				}
+				else{
+
+				}
+			}
+
+			details = false;
+			function showDetails() {
+				if (details) {
+					$(".tr_breakdown").hide();
+				}
+				else{
+					$(".tr_breakdown").show();	
+				}
+
+				details = !details;
+			}
+
+			belts = {
+				1: 'white',
+				2: 'yellow',
+				3: 'orange',
+				4: 'blue',
+				5: 'purple',
+				6: 'brown',
+				7: 'black'
+			}
+
+			movements = ['Deadlift', 'Front squat', 'Running', 'Fran'];
+
+			function buildRow(row_text, score) {
+				score_int = Math.floor(score);
+
+				txt_details = '';
+				row_hide = '';
+
+				if (row_text == 'Current level') {
+					txt_details = '<small>&nbsp;<a href="#" onclick="showDetails();">Details</a></small>';
+				}
+				else {
+					row_hide = ' class="tr_breakdown" style="display: none"';
+				}
+
+				x = '<tr' + row_hide + '><td style="width:150px; padding: 2px; vertical-align: top">' + row_text + '</td>';
+
+				for (i in belts) {
+					if (score_int > i) {
+						background_color = belts[i];
+						x += '<td style="border:3px solid black; background-color: ' + background_color + '; width: 30px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>';
+					}
+					else if (score_int == i) {
+
+						background_color = belts[score_int];
+						if ($.inArray(background_color, ['blue', 'purple', 'brown', 'black']) >= 0) {
+							color = 'white';
+						}
+						else {
+							color = 'black';
+						}
+
+						value = Math.round(10 * (score - score_int));
+
+						x += '<td style="font-family: Times New Roman; text-align:center; border:3px solid black; background-color: ' + background_color + '; width: 30px; padding: 2px; color: ' + color + '">&nbsp;' + (value == 0 ? '&nbsp;' : 'I'.repeat(value) ) + '&nbsp;</td>';
+					}
+					else {
+						x += '<td style="border:2px dotted black; width: 30px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>';
+					}
+				}
+
+				x += '<td style="border:0">' + txt_details + '</td></tr>';  // TODO: fix
+
+				$("#tbl").append(x);
+			}
+
+			function buildRowNextLevel(data, belt, entry) {
+				stripe = Math.round(10 * (belt - Math.floor(belt))) ;
+				txt = '';
+				// txt2 = '';
+
+				if (belt == 7) {
+					// txt = "&nbsp;";
+					txt = 'Congrats! You are now a black belt! ';
+					$("#btn_log").hide();
+				}
+				else {
+					c = 0;
+
+					for (datum in data) {
+						// console.log(data[datum]);
+						val = data[datum];
+						if (val == belt && val < 7) {
+							txt += 'Work on ' + movements[c] + '<br>';
+						}
+
+						c += 1;
+					}
+				}
+
+				
+				// if (belt == 0) {
+				// 	if (entry == 0) {
+				// 		txt2 = 'Log your first entry';
+				// 	}
+				// 	else {
+				// 		txt2 = 'Get your first belt';
+				// 	}
+				// }
+				// else if (belt < 7) {
+				// 	if (stripe == 3) {
+				// 		txt2 = belts[Math.ceil(belt)].capitalize();
+				// 	}
+				// 	else {
+				// 		txt2 = belts[Math.floor(belt)].capitalize() + ' ' + (stripe + 1);
+				// 	}
+				// }
+				
+
+				x = '<tr><td colspan="9">&nbsp;</td></tr><tr><td style="vertical-align: top; padding: 2px">Next level</td><td colspan="8" style="vertical-align: top; padding: 2px">' + txt + '</td></tr>';
+
+				$("#tbl").append(x);
+			}
+
+			function buildEntry(gender, data) {
+				options_relevant = options[gender];
+
+				for (var i=0; i < data.length; i++) {
+					movement = movements[i];
+					options_movement = options_relevant[movement];
+					score_movement = data[i];
+
+					if (score_movement < 7) {
+						div = '<div class="panel panel-default"> \
+					    <div class="panel-heading" role="tab" id="heading' + i + '"> \
+					      <h4 class="panel-title"> \
+					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '">' + movement + '</a>';
+
+						val = '<table class="table table-hover table-condensed table-striped"><thead><th>Level</th><th>Movement</th><th></th></thead><tbody>';
+						for (opt in options_movement) {
+
+							if (opt > score_movement) {
+								opt_int = parseInt(opt);
+								opt_stripe = Math.round(10 * (opt - opt_int));
+								console.log(opt + ', ' + opt_stripe);
+
+								level = belts[opt_int].capitalize() + (opt_stripe > 0 ? ' ' + opt_stripe : '');
+
+								val += '<tr><td>' + level + '</td><td>' + options_movement[opt] + '</td><td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalConfirm">Select</button></td></tr>';
+							}
+						}
+
+						div += '</h4> \
+						    </div> \
+						    <div id="collapse' + i + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + i + '"> \
+						      <div class="panel-body">' + val + '</div> \
+						    </div> \
+						  </div>';
+
+						  $("#accordion").append(div);	
+					}
+
+					if (i > 0) {
+						break;
+					}
+				}
+			}
+
+			function calculateBelt(data) {
+				topx = data.sort().slice(2); // take the top N scores
+				min = data.min();
+
+				distance = (topx.min() - min).toFixed(2);
+				if (distance <= .8 & distance != 0.3) { // 2&2 satisfied
+					return topx.min();
+				}
+				else {
+					return min;
+				}
+			}
+
+			
+			$(document).ready(function (e) {
+				$.ajax({
+		            url: "/user/" + getParameterByName('user'),
+		            //url: "http://localhost:5000/user/" + getParameterByName('user'),
+		            type: "GET",
+		            dataType:'json',
+		            success: function(data){
+
+		            	name = data['user']['name'];
+		            	gender = data['user']['gender'];
+		            	data = data['user']['data'];
+		            	belt = data.min();
+		            	entry = data.max();
+
+		            	$("#name").text(name);
+
+		            	msg = '';
+		            	if (entry == 0) {
+		            		msg = 'You have not logged anything yet';
+		            	}
+		            	else if (belt == 0) {
+		            		msg = 'Get your first belt';
+		            	}
+		            	else{
+		            		msg = 'You are a ' + belts[Math.floor(belt)]  + ' belt';
+		            	}
+
+		            	colors = ['white', 'yellow', 'orange', 'blue', 'purple', 'brown', 'black'];
+
+		            	buildRow('Current level', calculateBelt(data));
+
+		            	for (var i=0; i < data.length; i++) {
+		            		buildRow(movements[i], data[i]);
+		            	}
+
+		            	buildRowNextLevel(data, belt, entry);
+
+		            	buildEntry(gender, data);
+
+
+		            	// xx = '';
+		            	// for (i in colors) {
+		            	// 	x = '<i class="fa fa-' + (belt == colors[i] ? 'check-' : '') + 'square-o fa-3x" style="color:' + colors[i] + '"></i>&nbsp;';
+		            	// 	xx += x;
+		            	// }
+
+		            	// $("#belt").html(xx);
+		            	// $("#msg").text(msg);
+
+
+		            	// $("#af").show();
+		            	// // static info
+		            	// $("#fc_extra").text(cost_fullcontact);
+		            	// $("#cb_extra").text(cost_clearbit);
+
+		            	// remaining_clearbit = parseInt(data['remaining_clearbit']);
+		            	// remaining_fullcontact = parseInt(data['remaining_fullcontact']);
+
+		            	// $("#fc_remaining").text(remaining_fullcontact);
+		            	// // TODO: cb remaining
+
+		            	// var i = 0;
+		            	// for (var a in data['results']){
+		            	// 	x = data['results'][a];
+		            	// 	email_found = parseInt(x['emails']) > 0;
+		            	// 	rows = parseInt(x['rows']);
+		            	// 	local_found = 0;
+		            	// 	btn = 'N/A';
+
+		            	// 	local = (x['next_step'] == 'local' ? true : false);
+
+		            	// 	cost = calculate_cost(rows, remaining_fullcontact, remaining_clearbit);
+		            	// 	quality = '?';
+		            	// 	dataset = x['dataset'];
+		            		
+
+		            	// 	if (email_found) {
+		            	// 		if (local) {
+		            	// 			cost = 0;
+		            	// 			btn = '<button type="button" class="btn btn-default btn-sm">Local</button>';
+		            	// 		}
+		            	// 		else{
+		            	// 			local_found = parseInt(x['local_found']);
+		            	// 			txt = 'local records: ' + local_found + ', conservative estimate: $' + cost;
+		            	// 			btn = '<button type="button" class="btn btn-primary btn-sm" id="tooltip' + i + '" data-placement="left" title="' + txt + '">&nbsp;Full&nbsp;</button>';
+		            	// 			cost = calculate_cost(rows - local_found, remaining_fullcontact, remaining_clearbit);
+		            	// 			quality = (100 * parseFloat(x['matched_complete'])).toFixed(0) + '%';
+		            	// 			dataset = '<a target="_blank" href="https://api.accessfuel.com/engine/audience.html?job=' + x['job'] + '">' + dataset + '</a>';
+		            	// 		}
+		            	// 	}
+
+		            	// 	time = Math.max(((local ? 0.1 : 1) * (rows - local_found) / 60 ).toFixed(0), 0);
+
+		            	// 	html = '<tr><td>' + x['timestamp'] + '</td><td>[need client]</td><td>' + dataset + '</td><td>' + rows + '</td><td>' + x['attributes'] + '</td><td>' + x['matched'] + '</td><td>' + (email_found ? 'Yes':'No') + '</td><td>' + quality + '</td><td>$' + cost + '</td><td>' + time + '</td><td>' + btn + '</td></tr>';
+		            	// 	$("#tbl tbody").append(html);
+
+		            	// 	i += 1;
+		            	// }
+
+		            	// $('#tbl').DataTable({
+		            	// 	'order': [[0, 'desc']]
+		            	// });
+		            }           
+		       });  
+			});
+
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+<!-- 		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8"> -->
+			<br>
+			<br>
+			<div class="jumbotron">
+				<img src="http://nextlevelwp.buckplace.com/wp-content/uploads/2014/01/logonumber.png" style="width:350px">
+				<br>
+				<br>
+				<div id="step1">
+					<h1>Hello, <span id="name"></span>!</h1>
+
+					<br>
+					<table style="border-spacing: 2px" id="tbl">
+						<!-- <tr>
+							<td style="width:150px; padding: 2px; vertical-align: top">Current level</td>
+							<td style="border:3px solid black; width: 20px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>
+							<td style="border:3px solid black; width: 20px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>
+							<td style="border:3px solid black; width: 20px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>
+							<td style="border:3px solid black; background-color: blue; padding: 2px; color: white">&nbsp;2&nbsp;</td>
+							<td style="border:2px dotted purple; width: 20px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>
+							<td style="border:2px dotted brown; width: 20px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>
+							<td style="border:2px dotted black; width: 20px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>
+							<td style="border:0"><small>&nbsp;<a href="#">Details</a></small></td>
+						</tr> -->
+					</table>
+					<br>
+					<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="step(1)" id="btn_log">Log an entry</a></p>
+
+					<p id="msg"></p>
+
+					<p id="belt"></p>
+				</div>
+
+				<div id="step2" style="display: none">
+					<p>Pick the movement:</p>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
+				</div>
+			</div>
+<!-- 			</div>
+			<div class="col-md-2"></div>
+		</div> -->
+		</div>
+	</body>
+</html>
+
+<!-- Confirm Modal -->
+<div class="modal fade" id="modalConfirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        Do you want to log X?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
