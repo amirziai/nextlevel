@@ -7,7 +7,7 @@ from functools import update_wrapper
 import copy
 
 # flask app
-current_version = '06'
+current_version = '07'
 app = Flask(__name__)
 app.secret_key = 'F!12Z@r47j\3yXm J xu&R~>X@H!j<<mM]Lwf/,?KXTxQ!'
 
@@ -77,11 +77,6 @@ def crossdomain(origin=None, methods=None, headers=None,
 def home():
     return send_from_directory('.', 'index_v%s.html' % current_version)
 
-
-@app.route('/options', methods=['GET'])
-@crossdomain(origin='*', headers="*", automatic_options=True)
-def options():
-    return send_from_directory('.', 'options.js')
 
 @app.route('/old/<version>', methods=['GET'])
 @crossdomain(origin='*', headers='*', automatic_options=True)
