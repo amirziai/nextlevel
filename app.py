@@ -164,6 +164,11 @@ def index():
 #     return send_from_directory('.', 'index_v%s.html' % version)
 
 
+@app.route('/privacy', methods=['GET'])
+def privacy():
+    return render_template('privacy.html')
+
+
 @app.route('/user/<email>', methods=['GET'])
 # @crossdomain(origin='*', headers="*", automatic_options=True)
 def user(email):
