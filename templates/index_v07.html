@@ -1,0 +1,370 @@
+<html>
+	<head>
+		<title>NextLevel</title>
+		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<!-- <script type="text/javascript" src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" src="//cdn.datatables.net/1.10.9/css/jquery.dataTables.miƒn.css"> 
+		<link rel="stylesheet" src="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css"> -->
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- data -->
+		<script src="options"></script>
+
+
+		<script type="text/javascript">
+			function getParameterByName(name, url) {
+			    if (!url) url = window.location.href;
+			    name = name.replace(/[\[\]]/g, "\\$&");
+			    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			        results = regex.exec(url);
+			    if (!results) return null;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+
+			// Array.prototype.min = function() {
+			//   return Math.min.apply(null, this);
+			// };
+
+			// Array.prototype.max = function() {
+			//   return Math.max.apply(null, this);
+			// };
+
+			String.prototype.capitalize = function() {
+			    return this.charAt(0).toUpperCase() + this.slice(1);
+			}
+
+			function step(step) {
+				if (step == 1) {
+					$("#step1").hide();
+					$("#step2").show();
+				}
+				else{
+					$("#step1").show();
+					$("#step2").hide();
+				}
+			}
+
+			function confirm(id) {
+				$('#confirm_' + id).show();
+				$('#select_' + id).hide();
+			}
+
+			function cancel(id) {
+				$('#confirm_' + id).hide();
+				$('#select_' + id).show();
+			}
+
+			function submit(id) {
+				id_list = id.split('_');
+				movement = id_list[0];
+
+				score = parseFloat(id_list[1]);
+				if (id_list.length == 3) {
+					score += .1 * parseFloat(id_list[2]);
+				}
+
+				score = score.toFixed(1);
+
+				data = {'movement': movement, 'score': score}
+
+				$.ajax({
+			        url: "/log",
+			        type: "post",
+		            dataType:'json',
+		            contentType: "application/json",
+			        data: JSON.stringify(data),
+			        success: function (response) {
+			           // you will get response from your php page (what you echo or print)          
+			           console.log($("#submit_btn_" + id).html);       
+			           $("#submit_btn_" + id).html('...');
+			           $("#submit_btn_" + id).prop('disabled', true);
+			           $("#tbl").html('');
+			           $('#accordion').html('');
+			           main_user_data();
+			           step(0);
+
+			        },
+			        error: function(jqXHR, textStatus, errorThrown) {
+			           console.log(textStatus, errorThrown);
+			        }
+
+
+			    });
+			}
+
+			details = false;
+			function showDetails() {
+				if (details) {
+					$(".tr_breakdown").hide();
+				}
+				else{
+					$(".tr_breakdown").show();	
+				}
+
+				details = !details;
+			}
+
+			belts = {
+				1: 'white',
+				2: 'yellow',
+				3: 'orange',
+				4: 'blue',
+				5: 'purple',
+				6: 'brown',
+				7: 'black'
+			}
+
+			movements = ['Deadlift', 'Front Squat', 'Weightlifting', 'Upper Body Pull', 'Upper Body Pushing', 'Rings', 'Squat Endurance', 'Fran', 'Diane', 'Annie', 'Running', 'Kettlebell', 'Aerobic Power Intervals', 'Rowing', 'Flexibility'];
+
+			function buildRow(row_text, score) {
+				score_int = Math.floor(score);
+
+				txt_details = '';
+				row_hide = '';
+
+				if (row_text == 'Current level') {
+					txt_details = '<small>&nbsp;<a href="#" onclick="showDetails();">Details</a></small>';
+				}
+				else {
+					row_hide = ' class="tr_breakdown" style="display: none"';
+				}
+
+				x = '<tr' + row_hide + '><td style="width:250px; padding: 2px; vertical-align: top">' + row_text + '</td>';
+
+				for (i in belts) {
+					if (score_int > i) {
+						background_color = belts[i];
+						x += '<td style="border:3px solid black; background-color: ' + background_color + '; width: 30px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>';
+					}
+					else if (score_int == i) {
+
+						background_color = belts[score_int];
+						if ($.inArray(background_color, ['blue', 'purple', 'brown', 'black']) >= 0) {
+							color = 'white';
+						}
+						else {
+							color = 'black';
+						}
+
+						value = Math.round(10 * (score - score_int));
+
+						x += '<td style="font-family: Times New Roman; text-align:center; border:3px solid black; background-color: ' + background_color + '; width: 30px; padding: 2px; color: ' + color + '">&nbsp;' + (value == 0 ? '&nbsp;' : 'I'.repeat(value) ) + '&nbsp;</td>';
+					}
+					else {
+						x += '<td style="border:2px dotted black; width: 30px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>';
+					}
+				}
+
+				x += '<td style="border:0">' + txt_details + '</td></tr>';  // TODO: fix
+
+				$("#tbl").append(x);
+			}
+
+			function buildRowNextLevel(data, belt, entry) {
+				stripe = Math.round(10 * (belt - Math.floor(belt))) ;
+				txt = '';
+				// txt2 = '';
+
+				if (belt == 7) {
+					// txt = "&nbsp;";
+					txt = 'Congrats! You are now a black belt! ';
+					$("#btn_log").hide();
+				}
+				else {
+					c = 0;
+					d = 0;
+
+					for (datum in data) {
+						val = data[datum];
+						if (val == belt && val < 7) {
+							txt += 'Work on ' + movements[c] + '<br>';
+
+							if (d > 1) {
+								break;
+							}
+
+							d += 1;
+						}
+
+						c += 1;
+					}
+				}
+
+				
+				// if (belt == 0) {
+				// 	if (entry == 0) {
+				// 		txt2 = 'Log your first entry';
+				// 	}
+				// 	else {
+				// 		txt2 = 'Get your first belt';
+				// 	}
+				// }
+				// else if (belt < 7) {
+				// 	if (stripe == 3) {
+				// 		txt2 = belts[Math.ceil(belt)].capitalize();
+				// 	}
+				// 	else {
+				// 		txt2 = belts[Math.floor(belt)].capitalize() + ' ' + (stripe + 1);
+				// 	}
+				// }
+				
+
+				x = '<tr><td colspan="9">&nbsp;</td></tr><tr><td style="vertical-align: top; padding: 2px">Next level</td><td colspan="8" style="vertical-align: top; padding: 2px">' + txt + '</td></tr>';
+
+				$("#tbl").append(x);
+			}
+
+			function buildEntry(data) {
+				options = [2.0, 2.1, 2.2, 2.3, 3.0, 3.1, 3.2, 3.3, 4.0, 4.1, 4.2, 4.3, 5.0, 5.1, 5.2, 5.3, 6.0, 6.1, 6.2, 6.3, 7.0];
+
+				for (var i=0; i < data.length; i++) {
+					movement = movements[i];
+					score_movement = data[i];
+
+					if (score_movement < 7) {
+						div = '<div class="panel panel-default"> \
+					    <div class="panel-heading" role="tab" id="heading' + i + '"> \
+					      <h4 class="panel-title"> \
+					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '">' + movement + '</a>';
+
+						val = '<table class="table table-hover table-condensed table-striped"><thead><th>Level</th><th></th></thead><tbody>';
+
+						trigger = false;
+						for (var opt=0; opt < options.length; opt++) {
+							opt_score = options[opt];
+							if (opt_score > score_movement) {
+								opt_int = parseInt(opt_score);
+								opt_stripe = Math.round(10 * (opt_score - opt_int));
+								level = belts[opt_int].capitalize() + (opt_stripe > 0 ? ' ' + opt_stripe : '');
+								id = movement.toString().replace(' ', '').replace(' ', '') + '_' + opt_score.toString().replace('.', '_');
+								val += '<tr><td style="width:50%">' + level + '</td><td style="width:50%;text-align:right"><div id="select_' + id + '"><button type="button" class="btn btn-primary btn-sm" onclick="confirm(\'' + id + '\')">Select</button></div><div style="display: none;" id="confirm_' + id + '"><button class="btn btn-success btn-sm" onclick="submit(\'' + id + '\')" id="submit_btn_' + id + '">Submit</button>&nbsp;<button class="btn btn-danger btn-sm" onclick="cancel(\'' + id + '\')">Cancel</button></div></td></tr>';
+							}
+						}
+
+						div += '</h4> \
+						    </div> \
+						    <div id="collapse' + i + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + i + '"> \
+						      <div class="panel-body">' + val + '</div> \
+						    </div> \
+						  </div>';
+
+						  $("#accordion").append(div);	
+					}
+
+				}
+			}
+
+			function listMin(list) {
+				output = 1000;
+				for (var i=0; i < list.length; i++) {
+					if (list[i] < output) {
+						output = list[i];
+					}
+				}
+
+				return output;
+			}
+
+			function listMax(list) {
+				output = 0;
+				for (var i=0; i < list.length; i++) {
+					if (list[i] > output) {
+						output = list[i];
+					}
+				}
+
+				return output;
+			}
+
+			function calculateBelt(data) {
+				var topx = data.slice(0);
+				topx = topx.sort().slice(2); // take the top N scores
+				min = listMin(data);
+
+				distance = (listMin(topx) - min).toFixed(2);
+				if (distance <= .8 & distance != 0.3) { // 2&2 satisfied
+					return listMin(topx);
+				}
+				else {
+					return min;
+				}
+			}
+
+			function main_user_data() {
+				$.ajax({
+		            url: "/data",
+		            //url: "http://localhost:5000/user/" + getParameterByName('user'),
+		            type: "GET",
+		            dataType:'json',
+		            success: function(datax){
+		            	// name = datax['user']['name'];
+		            	// gender = datax['user']['gender'];
+
+		            	belt = 7
+		            	entry = 0
+
+		            	belt = listMin(datax);
+		            	entry = listMax(datax);
+
+		            	$("#name").text(name);
+
+		            	belt_current = calculateBelt(datax);
+
+		            	buildRow('Current level', belt_current);
+
+		            	for (var i=0; i < datax.length; i++) {
+		            		buildRow(movements[i], datax[i]);
+		            	}
+
+		            	buildRowNextLevel(datax, belt, entry);
+
+		            	buildEntry(datax);
+		            }           
+		       });  
+			}
+
+			
+			$(document).ready(function (e) {
+				main_user_data();
+			});
+
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<br>
+			<br>
+			<div class="jumbotron">
+				<img src="http://i0.wp.com/www.levelmethodgym.com/wp-content/uploads/2014/01/levelMETHODgymLF.png?w=300">
+				<br>
+				<br>
+				<div id="step1">
+					<h1>Hello, <span>{{ current_user.nickname }}</span>!</h1>
+					<br>
+					<table style="border-spacing: 2px" id="tbl"></table>
+					<br>
+					<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="step(1)" id="btn_log">Log an entry</a></p>
+                    <br>
+                    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+				</div>
+
+				<div id="step2" style="display: none">
+					<p>Pick the movement:</p>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
+					<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="step(0)" id="btn_log">Go back</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
