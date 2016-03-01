@@ -14,16 +14,12 @@ current_version = '07'
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'F!12Z@r47j\3yXm J xu&R~>X@H!j<<mM]Lwf/,?KXTxQ!'
 app.config['MONGO_URI'] = '127.0.0.1:27017'
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['OAUTH_CREDENTIALS'] = {
     'facebook': {
         'id': '940836925972002',
         'secret': '4c954cbadb8c15ea65c49585f2c794c5'
     },
-    # 'twitter': {
-    #     'id': 'a',
-    #     'secret': 'b'
-    # }
 }
 
 db = SQLAlchemy(app)
@@ -73,8 +69,8 @@ def oauth_callback(provider):
 
     user = User.query.filter_by(social_id=social_id).first()
     if not user:
-        user_new = User(social_id=social_id, nickname=username, email=email, data=str([0] * 15))
-        db.session.add(user_new)
+        user = User(social_id=social_id, nickname=username, email=email, data=str([0] * 15))
+        db.session.add(user)
         db.session.commit()
     login_user(user, True)
     return redirect('/')
@@ -124,30 +120,33 @@ def get_user_data():
 @app.route('/log', methods=['POST'])
 def log():
     try:
-        movement, score = extract_from_json(request.json, ['movement', 'score'])
+        if not current_user.is_anonymous:
+            movement, score = extract_from_json(request.json, ['movement', 'score'])
 
-        # log it
-        with open('entries.log', 'a') as f:
-            f.write('%s,%s,%s,%s\n' % (current_user.email, movement, score, timestamp()))
-        
-        movement_index = None
+            # log it
+            with open('entries.log', 'a') as f:
+                f.write('%s,%s,%s,%s\n' % (current_user.email, movement, score, timestamp()))
 
-        for i, m in enumerate(movements):
-            if m.replace(' ', '') == movement:
-                movement_index = i
-                break
+            movement_index = None
 
-        if movement_index is not None:
-            print movement_index
-            data = current_user.data
-            data = ast.literal_eval(data)
-            data[movement_index] = float(score)
-            user = current_user
-            user.data = str(data)
-            db.session.add(user)
-            db.session.commit()
+            for i, m in enumerate(movements):
+                if m.replace(' ', '') == movement:
+                    movement_index = i
+                    break
 
-            return jsonify({'status': 'success'})
+            if movement_index is not None:
+                print movement_index
+                data = current_user.data
+                data = ast.literal_eval(data)
+                data[movement_index] = float(score)
+                user = current_user
+                user.data = str(data)
+                db.session.add(user)
+                db.session.commit()
+
+                return jsonify({'status': 'success'})
+        else:
+            return jsonify({'status': 'not authorized'})
 
 
     except Exception, e:
