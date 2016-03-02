@@ -231,36 +231,42 @@
 					movement = movements[i];
 					score_movement = data[i];
 
-					if (score_movement < 7) {
-						div = '<div class="panel panel-default"> \
-					    <div class="panel-heading" role="tab" id="heading' + i + '"> \
-					      <h4 class="panel-title"> \
-					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '">' + movement + ((score_movement == 0) ? '*':'') + '</a>';
+					// if (score_movement < 7) {
+                    div = '<div class="panel panel-default"> \
+                    <div class="panel-heading" role="tab" id="heading' + i + '"> \
+                      <h4 class="panel-title"> \
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '">' + movement + ((score_movement == 0) ? '*':'') + '</a>';
 
-						val = '<table class="table table-hover table-condensed table-striped"><thead><th>Level</th><th></th></thead><tbody>';
+                    val = '<table class="table table-hover table-condensed table-striped"><thead><th>Level</th><th></th></thead><tbody>';
 
-						trigger = false;
-						for (var opt=0; opt < options.length; opt++) {
-							opt_score = options[opt];
-							// if (opt_score > score_movement) {
-                            bgcolor = (opt_score == score_movement) ? ' style="background-color: #add8e6"' : '';
-                            opt_int = parseInt(opt_score);
-                            opt_stripe = Math.round(10 * (opt_score - opt_int));
-                            level = belts[opt_int].capitalize() + (opt_stripe > 0 ? ' ' + opt_stripe : '');
-                            id = movement.toString().replace(' ', '').replace(' ', '') + '_' + opt_score.toString().replace('.', '_');
-                            val += '<tr' + bgcolor + '><td style="width:50%">' + level + '</td><td style="width:50%;text-align:right"><div id="select_' + id + '"><button type="button" class="btn btn-primary btn-sm" onclick="confirm(\'' + id + '\')">Select</button></div><div style="display: none;" id="confirm_' + id + '"><button class="btn btn-success btn-sm" onclick="submit(\'' + id + '\')" id="submit_btn_' + id + '">Submit</button>&nbsp;<button class="btn btn-danger btn-sm" onclick="cancel(\'' + id + '\')">Cancel</button></div></td></tr>';
-							// }
-						}
+                    trigger = false;
 
-						div += '</h4> \
-						    </div> \
-						    <div id="collapse' + i + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + i + '"> \
-						      <div class="panel-body">' + val + '</div> \
-						    </div> \
-						  </div>';
+                    // different options for flexibility
+                    if (i == 14) {
+                        options = [2.2, 3.0, 3.2, 4.0, 4.2, 5.0, 6.0, 7.0];
+                    }
 
-						  $("#accordion").append(div);	
-					}
+                    for (var opt=0; opt < options.length; opt++) {
+                        opt_score = options[opt];
+                        // if (opt_score > score_movement) {
+                        bgcolor = (opt_score == score_movement) ? ' style="background-color: #add8e6"' : '';
+                        opt_int = parseInt(opt_score);
+                        opt_stripe = Math.round(10 * (opt_score - opt_int));
+                        level = belts[opt_int].capitalize() + (opt_stripe > 0 ? ' ' + opt_stripe : '');
+                        id = movement.toString().replace(' ', '').replace(' ', '') + '_' + opt_score.toString().replace('.', '_');
+                        val += '<tr' + bgcolor + '><td style="width:50%">' + level + '</td><td style="width:50%;text-align:right"><div id="select_' + id + '"><button type="button" class="btn btn-primary btn-sm" onclick="confirm(\'' + id + '\')">Select</button></div><div style="display: none;" id="confirm_' + id + '"><button class="btn btn-success btn-sm" onclick="submit(\'' + id + '\')" id="submit_btn_' + id + '">Submit</button>&nbsp;<button class="btn btn-danger btn-sm" onclick="cancel(\'' + id + '\')">Cancel</button></div></td></tr>';
+                        // }
+                    }
+
+                    div += '</h4> \
+                        </div> \
+                        <div id="collapse' + i + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + i + '"> \
+                          <div class="panel-body">' + val + '</div> \
+                        </div> \
+                      </div>';
+
+                      $("#accordion").append(div);
+					// }
 
 				}
 			}
