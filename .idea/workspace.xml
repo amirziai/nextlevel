@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32a37e9a-d01d-4883-8bb9-e0f8069743d9" name="Default" comment="changing pull to pulling">
+    <list default="true" id="32a37e9a-d01d-4883-8bb9-e0f8069743d9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index_v07.html" afterPath="$PROJECT_DIR$/templates/index_v07.html" />
     </list>
@@ -117,9 +117,11 @@
       <file leaf-file-name="index_v07.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53438735">
-              <caret line="245" column="74" selection-start-line="245" selection-start-column="74" selection-end-line="245" selection-end-column="74" />
-              <folding />
+            <state vertical-scroll-proportion="0.6916996">
+              <caret line="356" column="125" selection-start-line="356" selection-start-column="125" selection-end-line="356" selection-end-column="125" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -506,7 +508,19 @@
       <option name="project" value="LOCAL" />
       <updated>1456959439882</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changing pull to pulling, different options for flexibility">
+      <created>1456959932453</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1456959932453</updated>
+    </task>
+    <task id="LOCAL-00009" summary="center aligning the logo">
+      <created>1456960124355</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1456960124355</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -544,7 +558,9 @@
     <MESSAGE value="highlighting the current score" />
     <MESSAGE value="add asterisk for movements with no score" />
     <MESSAGE value="changing pull to pulling" />
-    <option name="LAST_COMMIT_MESSAGE" value="changing pull to pulling" />
+    <MESSAGE value="changing pull to pulling, different options for flexibility" />
+    <MESSAGE value="center aligning the logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="center aligning the logo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -565,7 +581,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -648,7 +666,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -738,7 +758,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -828,7 +850,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -918,7 +942,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,9 +1067,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53438735">
-          <caret line="245" column="74" selection-start-line="245" selection-start-column="74" selection-end-line="245" selection-end-column="74" />
-          <folding />
+        <state vertical-scroll-proportion="0.6916996">
+          <caret line="356" column="125" selection-start-line="356" selection-start-column="125" selection-end-line="356" selection-end-column="125" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
