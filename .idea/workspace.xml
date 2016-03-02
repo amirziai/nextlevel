@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32a37e9a-d01d-4883-8bb9-e0f8069743d9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index_v07.html" afterPath="$PROJECT_DIR$/templates/index_v07.html" />
     </list>
     <ignored path="nextlevel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,8 +117,8 @@
       <file leaf-file-name="index_v07.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39318886">
-              <caret line="237" column="217" selection-start-line="237" selection-start-column="217" selection-end-line="237" selection-end-column="217" />
+            <state vertical-scroll-proportion="0.47509882">
+              <caret line="138" column="77" selection-start-line="138" selection-start-column="77" selection-end-line="138" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -493,7 +494,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456952079542</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add asterisk for movements with no score">
+      <created>1456952101311</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1456952101311</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -529,7 +536,8 @@
     <MESSAGE value="ignore .idea folder since it's not abundantly clearly" />
     <MESSAGE value="previous levels always available to user for selection" />
     <MESSAGE value="highlighting the current score" />
-    <option name="LAST_COMMIT_MESSAGE" value="highlighting the current score" />
+    <MESSAGE value="add asterisk for movements with no score" />
+    <option name="LAST_COMMIT_MESSAGE" value="add asterisk for movements with no score" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1026,8 +1034,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39318886">
-          <caret line="237" column="217" selection-start-line="237" selection-start-column="217" selection-end-line="237" selection-end-column="217" />
+        <state vertical-scroll-proportion="0.47509882">
+          <caret line="138" column="77" selection-start-line="138" selection-start-column="77" selection-end-line="138" selection-end-column="77" />
           <folding />
         </state>
       </provider>
