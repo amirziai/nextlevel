@@ -82,7 +82,7 @@ def oauth_callback(provider):
 # db = conn['nextlevel']
 
 
-movements = ['Deadlift', 'Front Squat', 'Weightlifting', 'Upper Body Pull',
+movements = ['Deadlift', 'Front Squat', 'Weightlifting', 'Upper Body Pulling',
             'Upper Body Pushing', 'Rings', 'Squat Endurance', 'Fran',
             'Diane', 'Annie', 'Running', 'Kettlebell',
             'Aerobic Power Intervals', 'Rowing', 'Flexibility']
