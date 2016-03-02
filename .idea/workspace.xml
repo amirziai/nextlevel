@@ -117,8 +117,8 @@
       <file leaf-file-name="index_v07.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46219134">
-              <caret line="244" column="64" selection-start-line="244" selection-start-column="64" selection-end-line="244" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.36996904">
+              <caret line="235" column="86" selection-start-line="235" selection-start-column="86" selection-end-line="235" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -159,7 +159,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="2560" />
-    <option name="height" value="1417" />
+    <option name="height" value="1413" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -186,6 +186,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -220,8 +222,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -482,11 +482,17 @@
       <option name="project" value="LOCAL" />
       <updated>1456889094112</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="highlighting the current score">
+      <created>1456946690477</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1456946690477</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="2560" height="1413" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -517,7 +523,8 @@
     <MESSAGE value="updating sqlite requirements" />
     <MESSAGE value="ignore .idea folder since it's not abundantly clearly" />
     <MESSAGE value="previous levels always available to user for selection" />
-    <option name="LAST_COMMIT_MESSAGE" value="previous levels always available to user for selection" />
+    <MESSAGE value="highlighting the current score" />
+    <option name="LAST_COMMIT_MESSAGE" value="highlighting the current score" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1014,8 +1021,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46219134">
-          <caret line="244" column="64" selection-start-line="244" selection-start-column="64" selection-end-line="244" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.36996904">
+          <caret line="235" column="86" selection-start-line="235" selection-start-column="86" selection-end-line="235" selection-end-column="86" />
           <folding />
         </state>
       </provider>
