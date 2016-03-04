@@ -1,6 +1,6 @@
 import sys
 from flask import Flask, request, jsonify, make_response, current_app, send_from_directory,\
-    url_for, redirect, render_template
+    url_for, redirect, render_template, Response
 from datetime import timedelta, datetime
 from functools import update_wrapper
 
@@ -8,6 +8,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.login import LoginManager, UserMixin, logout_user, current_user, login_user
 from oauth import OAuthSignIn
 import ast
+from functools import wraps
 
 # flask app
 current_version = '07'
@@ -152,6 +153,44 @@ def log():
     except Exception, e:
         print e
         return jsonify({'error': e})
+
+
+# admin
+def check_auth(username, password):
+    """This function is called to check if a username /
+    password combination is valid.
+    """
+    return username == 'nate' and password == '91jcsa9x@#x!'
+
+
+def authenticate():
+    """Sends a 401 response that enables basic auth"""
+    return Response(
+            'Could not verify your access level for that URL.\n'
+            'You have to login with proper credentials', 401,
+            {'WWW-Authenticate': 'Basic realm="Login Required"'})
+
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            return authenticate()
+        return f(*args, **kwargs)
+
+    return decorated
+
+
+@app.route('/admin', methods=['GET'])
+@requires_auth
+def admin():
+    import sqlite3
+    import pandas as pd
+    conn = sqlite3.connect("db.sqlite")
+    rs = conn.execute("select * from users")
+    df = pd.DataFrame(list(rs))
+    return jsonify({'emails': list(df.ix[:, 4])})
 
 
 if __name__ == '__main__':

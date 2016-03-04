@@ -9,3 +9,4 @@ argparse
 itsdangerous
 rauth
 requests
+pandas
