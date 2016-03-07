@@ -317,7 +317,7 @@
 		            	belt = listMin(datax);
 		            	entry = listMax(datax);
 
-		            	$("#name").text(name);
+		            	// $("#name").text(name);
 
 		            	belt_current = calculateBelt(datax);
 
@@ -353,7 +353,7 @@
 				<br>
 				<br>
 				<div id="step1">
-					<h1>Hello, <span>{{ current_user.nickname }}</span>!</h1>
+					<h1>Hello, <span>{{ current_user.nickname.split(' ')[0] }}</span>!</h1>
 					<br>
 					<table style="border-spacing: 2px" id="tbl"></table>
 					<br>
