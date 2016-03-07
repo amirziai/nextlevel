@@ -45,14 +45,14 @@
             return output;
         }
 
-        function buildRow(row_text, score, type, i) {
+        function buildRow(row_text, score, type, i, entries) {
             var score_int = Math.floor(score);
 
             var txt_details = '';
             var row_hide = '';
 
             if (type == 'user') {
-                txt_details = '<small>&nbsp;<a href="#" onclick="showDetails(' + i + ');">Details</a></small>';
+                txt_details = '<small>&nbsp;<a href="#" onclick="showDetails(' + i + ');">Details (' + entries + ')</a></small>';
             }
             else {
                 row_hide = ' class="tr_breakdown' + i + '" style="display: none"';
@@ -114,6 +114,9 @@
         }
 
         var details = [];
+        var users_with_entries = 0;
+        var users_with_belt = 0;
+
         $.ajax({
             url: "/admin_data",
             type: "GET",
@@ -130,14 +133,34 @@
                     var email = results[datum]['email'];
                     var data_levels = results[datum]['data'];
 
+                    var entries = 0;
+                    for (var i=0; i < data_levels.length; i++) {
+                        if (data_levels[i] > 0) {
+                            entries++;
+                        }
+                    }
+
+                    if (entries > 0) {
+                        users_with_entries++;
+                    }
+
+                    if (entries == 15) {
+                        users_with_belt++;
+                    }
+
                     var belt_current = calculateBelt(data_levels);
 
-                    buildRow(email, belt_current, 'user', datum);
+                    buildRow(email, belt_current, 'user', datum, entries);
 
                     for (var i=0; i < data_levels.length; i++) {
-                        buildRow(movements[i], data_levels[i], '', datum);
+                        buildRow(movements[i], data_levels[i], '', datum, entries);
                     }
                 }
+
+                $("#users_with_entries").text(users_with_entries);
+                $("#users_with_belt").text(users_with_belt);
+                $("#pct_entry").text((100 * users_with_entries / count).toFixed(0) + '%');
+                $("#pct_belt").text((100 * users_with_belt / count).toFixed(0) + '%');
             }
         });
     </script>
@@ -147,7 +170,14 @@
         <div class="row">
             <div class="col-md-12">
                 <br>
-                <p style="font-weight: bold"><span id="count"></span> Members have signed up!</p>
+                <p style="font-weight: bold">
+                    <span id="count"></span> Members have signed up!
+                    <br>
+                    <span id="users_with_entries"></span> Member have at least one entry (<span id="pct_entry"></span>)
+                    <br>
+                    <span id="users_with_belt"></span> Have received a belt (<span id="pct_belt"></span>)
+                </p>
+
                 <table style="border-spacing: 2px" id="tbl"></table>
             </div>
         </div>
