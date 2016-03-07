@@ -7,12 +7,144 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <script type="text/javascript">
+        function calculateBelt(data) {
+            var topx = data.slice(0);
+            topx = topx.sort().slice(2); // take the top N scores
+            min = listMin(data);
+
+            distance = (listMin(topx) - min).toFixed(2);
+            if (distance <= .8 & distance != 0.3) { // 2&2 satisfied
+                return listMin(topx);
+            }
+            else {
+                return min;
+            }
+        }
+
+        function listMin(list) {
+            output = 1000;
+            for (var i=0; i < list.length; i++) {
+                if (list[i] < output) {
+                    output = list[i];
+                }
+            }
+
+            return output;
+        }
+
+        function listMax(list) {
+            output = 0;
+            for (var i=0; i < list.length; i++) {
+                if (list[i] > output) {
+                    output = list[i];
+                }
+            }
+
+            return output;
+        }
+
+        function buildRow(row_text, score, type) {
+            score_int = Math.floor(score);
+
+            txt_details = '';
+            row_hide = '';
+
+            if (type == 'user') {
+                txt_details = '<small>&nbsp;<a href="#" onclick="showDetails();">Details</a></small>';
+            }
+            else {
+                row_hide = ' class="tr_breakdown" style="display: none"';
+            }
+
+            x = '<tr' + row_hide + '><td style="width:250px; padding: 2px; vertical-align: top">' + row_text + '</td>';
+
+            for (i in belts) {
+                if (score_int > i) {
+                    background_color = belts[i];
+                    x += '<td style="border:3px solid black; background-color: ' + background_color + '; width: 30px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>';
+                }
+                else if (score_int == i) {
+
+                    background_color = belts[score_int];
+                    if ($.inArray(background_color, ['blue', 'purple', 'brown', 'black']) >= 0) {
+                        color = 'white';
+                    }
+                    else {
+                        color = 'black';
+                    }
+
+                    value = Math.round(10 * (score - score_int));
+
+                    x += '<td style="font-family: Times New Roman; text-align:center; border:3px solid black; background-color: ' + background_color + '; width: 30px; padding: 2px; color: ' + color + '">&nbsp;' + (value == 0 ? '&nbsp;' : 'I'.repeat(value) ) + '&nbsp;</td>';
+                }
+                else {
+                    x += '<td style="border:2px dotted black; width: 30px; padding: 2px">&nbsp;&nbsp;&nbsp;</td>';
+                }
+            }
+
+            x += '<td style="border:0">' + txt_details + '</td></tr>';  // TODO: fix
+
+            $("#tbl").append(x);
+        }
+
+        movements = ['Deadlift', 'Front Squat', 'Weightlifting', 'Upper Body Pulling', 'Upper Body Pushing', 'Rings', 'Squat Endurance', 'Fran', 'Diane', 'Annie', 'Running', 'Kettlebell', 'Aerobic Power Intervals', 'Rowing', 'Flexibility'];
+
+        belts = {
+            1: 'white',
+            2: 'yellow',
+            3: 'orange',
+            4: 'blue',
+            5: 'purple',
+            6: 'brown',
+            7: 'black'
+        }
+
+        function showDetails() {
+            if (details) {
+                $(".tr_breakdown").hide();
+            }
+            else{
+                $(".tr_breakdown").show();
+            }
+
+            details = !details;
+        }
+
+        $.ajax({
+            url: "/admin_data",
+            type: "GET",
+            dataType: 'json',
+            success: function (data) {
+                var results = data['results'];
+
+                for (var datum in data['results']) {
+                    var email = results[datum]['email'];
+                    var data_levels = results[datum]['data'];
+
+                    var belt_current = calculateBelt(data_levels);
+
+                    buildRow(email, belt_current, 'user');
+
+                    for (var i=0; i < data_levels.length; i++) {
+                        buildRow(movements[i], data_levels[i], '');
+                    }
+
+                    console.log(email);
+                    console.log(data_levels);
+                    console.log('next');
+                }
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-
+                <br>
+                <table style="border-spacing: 2px" id="tbl"></table>
             </div>
         </div>
     </div>

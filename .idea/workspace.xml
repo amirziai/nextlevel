@@ -5,6 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth.py" afterPath="$PROJECT_DIR$/oauth.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin.html" afterPath="$PROJECT_DIR$/templates/admin.html" />
     </list>
     <ignored path="nextlevel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,14 +30,19 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.296296">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.814815">
+              <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
               <folding>
+                <element signature="e#956#1259#0" expanded="false" />
                 <element signature="e#1301#1331#0" expanded="false" />
                 <element signature="e#1374#1412#0" expanded="false" />
+                <element signature="e#1486#1624#0" expanded="false" />
+                <element signature="e#1696#2234#0" expanded="false" />
+                <element signature="e#2528#2579#0" expanded="false" />
                 <element signature="e#2623#2661#0" expanded="false" />
                 <element signature="e#2714#2851#0" expanded="false" />
                 <element signature="e#2913#2951#0" expanded="false" />
+                <element signature="e#3016#3145#0" expanded="false" />
                 <element signature="e#3200#4269#0" expanded="false" />
                 <element signature="e#4317#4472#0" expanded="false" />
                 <element signature="e#4317#4411#1" expanded="false" />
@@ -44,17 +50,17 @@
                 <element signature="e#4792#5033#0" expanded="false" />
                 <element signature="e#4846#5011#0" expanded="false" />
                 <element signature="e#5106#5142#0" expanded="false" />
-                <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+                <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.78287095">
+              <caret line="144" column="35" selection-start-line="144" selection-start-column="35" selection-end-line="144" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -80,18 +86,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oauth.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="oauth.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oauth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47727272">
-              <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+            <state vertical-scroll-proportion="-8.333333">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
               <folding>
-                <element signature="e#123#956#0" expanded="false" />
                 <element signature="e#188#397#0" expanded="false" />
                 <element signature="e#432#436#0" expanded="false" />
                 <element signature="e#470#474#0" expanded="false" />
                 <element signature="e#516#616#0" expanded="false" />
-                <element signature="e#686#956#0" expanded="false" />
                 <element signature="e#1026#1440#0" expanded="false" />
                 <element signature="e#1475#1643#0" expanded="false" />
               </folding>
@@ -102,8 +106,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="125" />
+            <state vertical-scroll-proportion="-13.75">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -112,9 +116,11 @@
       <file leaf-file-name="index_v07.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="32.5">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-              <folding />
+            <state vertical-scroll-proportion="-8.058824">
+              <caret line="108" column="13" selection-start-line="99" selection-start-column="12" selection-end-line="108" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,10 +156,10 @@
         <option value="$PROJECT_DIR$/templates/privacy.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/templates/admin.html" />
         <option value="$PROJECT_DIR$/templates/index_v07.html" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/oauth.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/admin.html" />
       </list>
     </option>
   </component>
@@ -560,7 +566,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457313628723</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="adding name to fb query, printing">
+      <created>1457313949282</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1457313949282</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -606,7 +618,8 @@
     <MESSAGE value="ignore xml" />
     <MESSAGE value="adding admin endpoint, adding name to captured data from fb" />
     <MESSAGE value="adding name to fb query" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding name to fb query" />
+    <MESSAGE value="adding name to fb query, printing" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding name to fb query, printing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -619,7 +632,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -636,11 +651,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding>
+            <element signature="e#956#1259#0" expanded="false" />
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
+            <element signature="e#1486#1624#0" expanded="false" />
+            <element signature="e#1696#2234#0" expanded="false" />
+            <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
+            <element signature="e#3016#3145#0" expanded="false" />
             <element signature="e#3200#4269#0" expanded="false" />
             <element signature="e#4317#4472#0" expanded="false" />
             <element signature="e#4317#4411#1" expanded="false" />
@@ -648,7 +668,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -666,12 +686,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
           <folding>
-            <element signature="e#123#956#0" expanded="false" />
             <element signature="e#188#397#0" expanded="false" />
             <element signature="e#432#436#0" expanded="false" />
             <element signature="e#470#474#0" expanded="false" />
             <element signature="e#516#616#0" expanded="false" />
-            <element signature="e#686#956#0" expanded="false" />
             <element signature="e#1026#1440#0" expanded="false" />
             <element signature="e#1475#1643#0" expanded="false" />
           </folding>
@@ -706,7 +724,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -723,11 +743,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#956#1259#0" expanded="false" />
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
+            <element signature="e#1486#1624#0" expanded="false" />
+            <element signature="e#1696#2234#0" expanded="false" />
+            <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
+            <element signature="e#3016#3145#0" expanded="false" />
             <element signature="e#3200#4269#0" expanded="false" />
             <element signature="e#4317#4472#0" expanded="false" />
             <element signature="e#4317#4411#1" expanded="false" />
@@ -735,7 +760,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -760,12 +785,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="47" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="47" />
           <folding>
-            <element signature="e#123#956#0" expanded="false" />
             <element signature="e#188#397#0" expanded="false" />
             <element signature="e#432#436#0" expanded="false" />
             <element signature="e#470#474#0" expanded="false" />
             <element signature="e#516#616#0" expanded="false" />
-            <element signature="e#686#956#0" expanded="false" />
             <element signature="e#1026#1440#0" expanded="false" />
             <element signature="e#1475#1643#0" expanded="false" />
           </folding>
@@ -800,7 +823,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -817,11 +842,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#956#1259#0" expanded="false" />
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
+            <element signature="e#1486#1624#0" expanded="false" />
+            <element signature="e#1696#2234#0" expanded="false" />
+            <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
+            <element signature="e#3016#3145#0" expanded="false" />
             <element signature="e#3200#4269#0" expanded="false" />
             <element signature="e#4317#4472#0" expanded="false" />
             <element signature="e#4317#4411#1" expanded="false" />
@@ -829,7 +859,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -854,12 +884,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="47" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="47" />
           <folding>
-            <element signature="e#123#956#0" expanded="false" />
             <element signature="e#188#397#0" expanded="false" />
             <element signature="e#432#436#0" expanded="false" />
             <element signature="e#470#474#0" expanded="false" />
             <element signature="e#516#616#0" expanded="false" />
-            <element signature="e#686#956#0" expanded="false" />
             <element signature="e#1026#1440#0" expanded="false" />
             <element signature="e#1475#1643#0" expanded="false" />
           </folding>
@@ -894,7 +922,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -911,11 +941,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#956#1259#0" expanded="false" />
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
+            <element signature="e#1486#1624#0" expanded="false" />
+            <element signature="e#1696#2234#0" expanded="false" />
+            <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
+            <element signature="e#3016#3145#0" expanded="false" />
             <element signature="e#3200#4269#0" expanded="false" />
             <element signature="e#4317#4472#0" expanded="false" />
             <element signature="e#4317#4411#1" expanded="false" />
@@ -923,7 +958,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -948,12 +983,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="47" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="47" />
           <folding>
-            <element signature="e#123#956#0" expanded="false" />
             <element signature="e#188#397#0" expanded="false" />
             <element signature="e#432#436#0" expanded="false" />
             <element signature="e#470#474#0" expanded="false" />
             <element signature="e#516#616#0" expanded="false" />
-            <element signature="e#686#956#0" expanded="false" />
             <element signature="e#1026#1440#0" expanded="false" />
             <element signature="e#1475#1643#0" expanded="false" />
           </folding>
@@ -988,7 +1021,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1017,14 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7021028">
           <caret line="353" column="131" selection-start-line="353" selection-start-column="131" selection-end-line="353" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="125" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,14 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25">
@@ -1083,24 +1102,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="32.5">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state vertical-scroll-proportion="-13.75">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oauth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.333333">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <element signature="e#188#397#0" expanded="false" />
+            <element signature="e#432#436#0" expanded="false" />
+            <element signature="e#470#474#0" expanded="false" />
+            <element signature="e#516#616#0" expanded="false" />
+            <element signature="e#1026#1440#0" expanded="false" />
+            <element signature="e#1475#1643#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.296296">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.814815">
+          <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
           <folding>
+            <element signature="e#956#1259#0" expanded="false" />
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
+            <element signature="e#1486#1624#0" expanded="false" />
+            <element signature="e#1696#2234#0" expanded="false" />
+            <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
+            <element signature="e#3016#3145#0" expanded="false" />
             <element signature="e#3200#4269#0" expanded="false" />
             <element signature="e#4317#4472#0" expanded="false" />
             <element signature="e#4317#4411#1" expanded="false" />
@@ -1108,25 +1147,26 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oauth.py">
+    <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47727272">
-          <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+        <state vertical-scroll-proportion="-8.058824">
+          <caret line="108" column="13" selection-start-line="99" selection-start-column="12" selection-end-line="108" selection-end-column="13" />
           <folding>
-            <element signature="e#123#956#0" expanded="false" />
-            <element signature="e#188#397#0" expanded="false" />
-            <element signature="e#432#436#0" expanded="false" />
-            <element signature="e#470#474#0" expanded="false" />
-            <element signature="e#516#616#0" expanded="false" />
-            <element signature="e#686#956#0" expanded="false" />
-            <element signature="e#1026#1440#0" expanded="false" />
-            <element signature="e#1475#1643#0" expanded="false" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78287095">
+          <caret line="144" column="35" selection-start-line="144" selection-start-column="35" selection-end-line="144" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

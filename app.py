@@ -191,17 +191,9 @@ def admin_data():
 
     l = []
     for r in rs:
-        l.append({'email': r[4], 'data': r[3]})
+        l.append({'email': r[4], 'data': ast.literal_eval(r[3])})
 
     return jsonify(results=l)
-
-
-@app.route('/test_name', methods=['GET'])
-def test_name():
-    oauth = OAuthSignIn.get_provider('facebook')
-
-
-    return jsonify({'name': oauth.callback()})
 
 
 if __name__ == '__main__':

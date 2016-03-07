@@ -68,9 +68,7 @@ class FacebookSignIn(OAuthSignIn):
 
         return (
             'facebook$' + me['id'],
-            me.get('email').split('@')[0],  # Facebook does not provide
-                                            # username, so the email's user
-                                            # is used instead
+            me.get('email').split('@')[0],  # Facebook does not provide username
             me.get('email'),
             name
         )
