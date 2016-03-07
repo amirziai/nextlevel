@@ -63,14 +63,14 @@ def oauth_callback(provider):
         return redirect('/')
 
     oauth = OAuthSignIn.get_provider(provider)
-    social_id, username, email = oauth.callback()
+    social_id, username, email, name = oauth.callback()
     if social_id is None:
         flash('Authentication failed.')
         return redirect('/')
 
     user = User.query.filter_by(social_id=social_id).first()
     if not user:
-        user = User(social_id=social_id, nickname=username, email=email, data=str([0] * 15))
+        user = User(social_id=social_id, nickname=name, email=email, data=str([0] * 15))
         db.session.add(user)
         db.session.commit()
     login_user(user, True)
@@ -194,6 +194,14 @@ def admin_data():
         l.append({'email': r[4], 'data': r[3]})
 
     return jsonify(results=l)
+
+
+@app.route('/test_name', methods=['GET'])
+def test_name():
+    oauth = OAuthSignIn.get_provider('facebook')
+    social_id, username, email, name = oauth.callback()
+
+    return jsonify({'name': name})
 
 
 if __name__ == '__main__':
