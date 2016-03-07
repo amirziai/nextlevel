@@ -1,6 +1,9 @@
 from rauth import OAuth2Service
 from flask import current_app, url_for, request, redirect
-from app import timestamp
+
+
+def timestamp():
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
 class OAuthSignIn(object):
