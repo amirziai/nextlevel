@@ -1,5 +1,6 @@
 from rauth import OAuth2Service
 from flask import current_app, url_for, request, redirect
+from app import timestamp
 
 
 class OAuthSignIn(object):
@@ -61,8 +62,12 @@ class FacebookSignIn(OAuthSignIn):
         me = oauth_session.get('me?fields=id,email,name').json()
         name = ''
         try:
-            print 'Name is %s' % me.get('name')
             name = me.get('name')
+            with open('logins.log', 'a') as f:
+                f.write('%s,%s,%s\n' % (me.get('email'), name, timestamp()))
+
+            print 'Email: %s, name: %s' % ()
+
         except Exception, e:
             print 'error', e
 
