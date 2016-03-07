@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth.py" afterPath="$PROJECT_DIR$/oauth.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index_v07.html" afterPath="$PROJECT_DIR$/templates/index_v07.html" />
     </list>
     <ignored path="nextlevel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,15 +26,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7713951">
-              <caret line="200" column="34" selection-start-line="200" selection-start-column="34" selection-end-line="200" selection-end-column="34" />
+            <state vertical-scroll-proportion="-13.296296">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="e#1301#1331#0" expanded="false" />
                 <element signature="e#1374#1412#0" expanded="false" />
-                <element signature="e#1486#1624#0" expanded="false" />
                 <element signature="e#2623#2661#0" expanded="false" />
                 <element signature="e#2714#2851#0" expanded="false" />
                 <element signature="e#2913#2951#0" expanded="false" />
@@ -46,7 +44,7 @@
                 <element signature="e#4792#5033#0" expanded="false" />
                 <element signature="e#4846#5011#0" expanded="false" />
                 <element signature="e#5106#5142#0" expanded="false" />
-                <marker date="1457313612000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+                <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
               </folding>
             </state>
           </provider>
@@ -82,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oauth.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="oauth.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/oauth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.47727272">
+              <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
               <folding>
                 <element signature="e#123#956#0" expanded="false" />
                 <element signature="e#188#397#0" expanded="false" />
@@ -154,8 +152,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/admin.html" />
         <option value="$PROJECT_DIR$/templates/index_v07.html" />
-        <option value="$PROJECT_DIR$/oauth.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/oauth.py" />
       </list>
     </option>
   </component>
@@ -556,7 +554,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457312883084</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="adding name to fb query">
+      <created>1457313628723</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1457313628723</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -601,7 +605,8 @@
     <MESSAGE value="adding admin endpoint" />
     <MESSAGE value="ignore xml" />
     <MESSAGE value="adding admin endpoint, adding name to captured data from fb" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding admin endpoint, adding name to captured data from fb" />
+    <MESSAGE value="adding name to fb query" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding name to fb query" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -633,7 +638,6 @@
           <folding>
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
-            <element signature="e#1486#1624#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
@@ -644,7 +648,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313612000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -721,7 +725,6 @@
           <folding>
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
-            <element signature="e#1486#1624#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
@@ -732,7 +735,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313612000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -816,7 +819,6 @@
           <folding>
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
-            <element signature="e#1486#1624#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
@@ -827,7 +829,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313612000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -911,7 +913,6 @@
           <folding>
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
-            <element signature="e#1486#1624#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
@@ -922,7 +923,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313612000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -1090,31 +1091,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oauth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#123#956#0" expanded="false" />
-            <element signature="e#188#397#0" expanded="false" />
-            <element signature="e#432#436#0" expanded="false" />
-            <element signature="e#470#474#0" expanded="false" />
-            <element signature="e#516#616#0" expanded="false" />
-            <element signature="e#686#956#0" expanded="false" />
-            <element signature="e#1026#1440#0" expanded="false" />
-            <element signature="e#1475#1643#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7713951">
-          <caret line="200" column="34" selection-start-line="200" selection-start-column="34" selection-end-line="200" selection-end-column="34" />
+        <state vertical-scroll-proportion="-13.296296">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="e#1301#1331#0" expanded="false" />
             <element signature="e#1374#1412#0" expanded="false" />
-            <element signature="e#1486#1624#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
             <element signature="e#2714#2851#0" expanded="false" />
             <element signature="e#2913#2951#0" expanded="false" />
@@ -1125,7 +1108,24 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457313612000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457313867000" expanded="true" signature="5303:5322" placeholder="select * fro... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oauth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47727272">
+          <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+          <folding>
+            <element signature="e#123#956#0" expanded="false" />
+            <element signature="e#188#397#0" expanded="false" />
+            <element signature="e#432#436#0" expanded="false" />
+            <element signature="e#470#474#0" expanded="false" />
+            <element signature="e#516#616#0" expanded="false" />
+            <element signature="e#686#956#0" expanded="false" />
+            <element signature="e#1026#1440#0" expanded="false" />
+            <element signature="e#1475#1643#0" expanded="false" />
           </folding>
         </state>
       </provider>

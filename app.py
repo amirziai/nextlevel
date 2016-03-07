@@ -199,9 +199,9 @@ def admin_data():
 @app.route('/test_name', methods=['GET'])
 def test_name():
     oauth = OAuthSignIn.get_provider('facebook')
-    social_id, username, email, name = oauth.callback()
 
-    return jsonify({'name': name})
+
+    return jsonify({'name': oauth.callback()})
 
 
 if __name__ == '__main__':

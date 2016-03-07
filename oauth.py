@@ -61,7 +61,7 @@ class FacebookSignIn(OAuthSignIn):
         me = oauth_session.get('me?fields=id,email,name').json()
         name = ''
         try:
-            print me.get('name')
+            print 'Name is %s' % me.get('name')
             name = me.get('name')
         except Exception, e:
             print 'error', e
