@@ -77,12 +77,6 @@ def oauth_callback(provider):
     return redirect('/')
 
 
-# mongo
-# mongo_url =
-# conn = pm.MongoClient(mongo_url)
-# db = conn['nextlevel']
-
-
 movements = ['Deadlift', 'Front Squat', 'Weightlifting', 'Upper Body Pulling',
             'Upper Body Pushing', 'Rings', 'Squat Endurance', 'Fran',
             'Diane', 'Annie', 'Running', 'Kettlebell',
@@ -185,12 +179,21 @@ def requires_auth(f):
 @app.route('/admin', methods=['GET'])
 @requires_auth
 def admin():
+    return render_template('admin.html')
+
+
+@app.route('/admin_data', methods=['GET'])
+@requires_auth
+def admin_data():
     import sqlite3
-    import pandas as pd
     conn = sqlite3.connect("db.sqlite")
     rs = conn.execute("select * from users")
-    df = pd.DataFrame(list(rs))
-    return jsonify({'emails': list(df.ix[:, 4])})
+
+    l = []
+    for r in rs:
+        l.append({'email': r[4], 'data': r[3]})
+
+    return jsonify(results=l)
 
 
 if __name__ == '__main__':

@@ -58,7 +58,12 @@ class FacebookSignIn(OAuthSignIn):
                   'grant_type': 'authorization_code',
                   'redirect_uri': self.get_callback_url()}
         )
-        me = oauth_session.get('me?fields=id,email').json()
+        me = oauth_session.get('me?fields=id,email,name').json()
+        try:
+            print me.get('name')
+        except Exception, e:
+            print 'error', e
+
         return (
             'facebook$' + me['id'],
             me.get('email').split('@')[0],  # Facebook does not provide
