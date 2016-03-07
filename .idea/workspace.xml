@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32a37e9a-d01d-4883-8bb9-e0f8069743d9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth.py" afterPath="$PROJECT_DIR$/oauth.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin.html" afterPath="$PROJECT_DIR$/templates/admin.html" />
     </list>
     <ignored path="nextlevel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,12 +53,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.6666665">
-              <caret line="121" column="52" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.35102534">
+              <caret line="121" column="46" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
               <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -85,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oauth.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="oauth.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oauth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24618992">
+            <state vertical-scroll-proportion="-7.7777777">
               <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -158,8 +159,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/index_v07.html" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/templates/admin.html" />
         <option value="$PROJECT_DIR$/oauth.py" />
+        <option value="$PROJECT_DIR$/templates/admin.html" />
       </list>
     </option>
   </component>
@@ -584,7 +585,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457316810523</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fixin syntax error">
+      <created>1457316882835</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1457316882835</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -633,7 +640,8 @@
     <MESSAGE value="adding name to fb query, printing" />
     <MESSAGE value="overall level per user" />
     <MESSAGE value="log logins" />
-    <option name="LAST_COMMIT_MESSAGE" value="log logins" />
+    <MESSAGE value="fixin syntax error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixin syntax error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1124,16 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6666665">
-          <caret line="121" column="52" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.058824">
@@ -1172,7 +1170,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/oauth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24618992">
+        <state vertical-scroll-proportion="-7.7777777">
           <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -1182,6 +1180,17 @@
             <element signature="e#591#691#0" expanded="false" />
             <element signature="e#1101#1515#0" expanded="false" />
             <element signature="e#1550#1718#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35102534">
+          <caret line="121" column="46" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

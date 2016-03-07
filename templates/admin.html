@@ -45,20 +45,20 @@
             return output;
         }
 
-        function buildRow(row_text, score, type) {
-            score_int = Math.floor(score);
+        function buildRow(row_text, score, type, i) {
+            var score_int = Math.floor(score);
 
-            txt_details = '';
-            row_hide = '';
+            var txt_details = '';
+            var row_hide = '';
 
             if (type == 'user') {
-                txt_details = '<small>&nbsp;<a href="#" onclick="showDetails();">Details</a></small>';
+                txt_details = '<small>&nbsp;<a href="#" onclick="showDetails(' + i + ');">Details</a></small>';
             }
             else {
-                row_hide = ' class="tr_breakdown" style="display: none"';
+                row_hide = ' class="tr_breakdown' + i + '" style="display: none"';
             }
 
-            x = '<tr' + row_hide + '><td style="width:250px; padding: 2px; vertical-align: top">' + row_text + '</td>';
+            var x = '<tr' + row_hide + '><td style="width:250px; padding: 2px; vertical-align: top">' + row_text + '</td>';
 
             for (i in belts) {
                 if (score_int > i) {
@@ -101,17 +101,19 @@
             7: 'black'
         }
 
-        function showDetails() {
-            if (details) {
-                $(".tr_breakdown").hide();
+        function showDetails(x) {
+
+            if (details[x]) {
+                $(".tr_breakdown" + x).hide();
             }
             else{
-                $(".tr_breakdown").show();
+                $(".tr_breakdown" + x).show();
             }
 
-            details = !details;
+            details[x] = !details[x];
         }
 
+        var details = [];
         $.ajax({
             url: "/admin_data",
             type: "GET",
@@ -119,21 +121,22 @@
             success: function (data) {
                 var results = data['results'];
 
+                var count = data['results'].length;
+                $("#count").text(count);
+                var details = new Array(count);
+                for (var i=0; i < details.length; ++i) {details[i] = false;}
+
                 for (var datum in data['results']) {
                     var email = results[datum]['email'];
                     var data_levels = results[datum]['data'];
 
                     var belt_current = calculateBelt(data_levels);
 
-                    buildRow(email, belt_current, 'user');
+                    buildRow(email, belt_current, 'user', datum);
 
                     for (var i=0; i < data_levels.length; i++) {
-                        buildRow(movements[i], data_levels[i], '');
+                        buildRow(movements[i], data_levels[i], '', datum);
                     }
-
-                    console.log(email);
-                    console.log(data_levels);
-                    console.log('next');
                 }
             }
         });
@@ -144,6 +147,7 @@
         <div class="row">
             <div class="col-md-12">
                 <br>
+                <p style="font-weight: bold"><span id="count"></span> Members have signed up!</p>
                 <table style="border-spacing: 2px" id="tbl"></table>
             </div>
         </div>
