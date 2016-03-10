@@ -158,8 +158,7 @@
 
 			function buildRowNextLevel(data, belt, entry) {
 				stripe = Math.round(10 * (belt - Math.floor(belt))) ;
-				txt = '';
-				// txt2 = '';
+				var txt = '';
 
 				if (belt == 7) {
 					// txt = "&nbsp;";
@@ -167,11 +166,11 @@
 					$("#btn_log").hide();
 				}
 				else {
-					c = 0;
-					d = 0;
+					var c = 0;
+					var d = 0;
 
 					for (datum in data) {
-						val = data[datum];
+						var val = data[datum];
 						if (val == belt && val < 7) {
 							txt += 'Work on ' + movements[c] + '<br>';
 
@@ -185,25 +184,6 @@
 						c += 1;
 					}
 				}
-
-				
-				// if (belt == 0) {
-				// 	if (entry == 0) {
-				// 		txt2 = 'Log your first entry';
-				// 	}
-				// 	else {
-				// 		txt2 = 'Get your first belt';
-				// 	}
-				// }
-				// else if (belt < 7) {
-				// 	if (stripe == 3) {
-				// 		txt2 = belts[Math.ceil(belt)].capitalize();
-				// 	}
-				// 	else {
-				// 		txt2 = belts[Math.floor(belt)].capitalize() + ' ' + (stripe + 1);
-				// 	}
-				// }
-				
 
 				x = '<tr><td colspan="9">&nbsp;</td></tr><tr><td style="vertical-align: top; padding: 2px">Next level</td><td colspan="8" style="vertical-align: top; padding: 2px">' + txt + '</td></tr>';
 
@@ -279,18 +259,28 @@
 				return output;
 			}
 
-			function calculateBelt(data) {
-				var topx = data.slice(0);
-				topx = topx.sort().slice(2); // take the top N scores
-				min = listMin(data);
+            function addTwoStripes(x) {
+                stripe = Math.round(10 * (x - Math.floor(x)));
+                base = Math.round(x);
 
-				distance = (listMin(topx) - min).toFixed(2);
-				if (distance <= .8 & distance != 0.3) { // 2&2 satisfied
-					return listMin(topx);
-				}
-				else {
-					return min;
-				}
+                if (stripe < 2) {
+                    return x + 0.2;
+                }
+                else if (stripe == 2) {
+                    return (1 + x)
+                }
+                else if (stripe == 3) {
+                    return (1 + x) + 0.1
+                }
+            }
+
+			function calculateBelt(data) {
+				var data_sorted = data.slice(0);
+				data_sorted = data_sorted.sort();
+                data_sorted[0] = addTwoStripes(data_sorted[0]);
+                data_sorted[1] = addTwoStripes(data_sorted[1]);
+
+				return listMin(data_sorted);
 			}
 
 			function main_user_data() {
