@@ -128,6 +128,7 @@
                 $("#count").text(count);
                 var details = new Array(count);
                 for (var i=0; i < details.length; ++i) {details[i] = false;}
+                var entries_total = 0;
 
                 for (var datum in data['results']) {
                     var email = results[datum]['email'];
@@ -139,6 +140,8 @@
                             entries++;
                         }
                     }
+
+                    entries_total += entries;
 
                     if (entries > 0) {
                         users_with_entries++;
@@ -161,6 +164,7 @@
                 $("#users_with_belt").text(users_with_belt);
                 $("#pct_entry").text((100 * users_with_entries / count).toFixed(0) + '%');
                 $("#pct_belt").text((100 * users_with_belt / count).toFixed(0) + '%');
+                $("#entries_total").text(entries_total);
             }
         });
     </script>
@@ -176,6 +180,8 @@
                     <span id="users_with_entries"></span> members have at least one entry (<span id="pct_entry"></span>)
                     <br>
                     <span id="users_with_belt"></span> have received a belt (<span id="pct_belt"></span>)
+                    <br>
+                    <span id="entries_total"></span> total entries
                 </p>
 
                 <table style="border-spacing: 2px" id="tbl"></table>
