@@ -191,7 +191,7 @@ def admin_data():
 
     l = []
     for r in rs:
-        l.append({'email': r[4], 'data': ast.literal_eval(r[3])})
+        l.append({'email': r[2], 'data': ast.literal_eval(r[3])})
 
     return jsonify(results=l)
 

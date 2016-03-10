@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32a37e9a-d01d-4883-8bb9-e0f8069743d9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index_v07.html" afterPath="$PROJECT_DIR$/templates/index_v07.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <ignored path="nextlevel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="86" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.41879636">
+              <caret line="141" column="53" selection-start-line="141" selection-start-column="53" selection-end-line="141" selection-end-column="53" />
               <folding>
                 <element signature="e#956#1259#0" expanded="false" />
                 <element signature="e#1301#1331#0" expanded="false" />
@@ -47,7 +47,7 @@
                 <element signature="e#4792#5033#0" expanded="false" />
                 <element signature="e#4846#5011#0" expanded="false" />
                 <element signature="e#5106#5142#0" expanded="false" />
-                <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+                <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
               </folding>
             </state>
           </provider>
@@ -56,8 +56,8 @@
       <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2916667">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+            <state vertical-scroll-proportion="-7.7647057">
+              <caret line="120" column="29" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -110,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_v07.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index_v07.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26348227">
-              <caret line="311" column="60" selection-start-line="311" selection-start-column="60" selection-end-line="311" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="321" column="32" selection-start-line="321" selection-start-column="32" selection-end-line="321" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -123,7 +123,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-6.25">
               <caret line="10" column="44" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="44" />
               <folding />
             </state>
@@ -151,10 +151,10 @@
         <option value="$PROJECT_DIR$/templates/privacy.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/oauth.py" />
         <option value="$PROJECT_DIR$/templates/admin.html" />
         <option value="$PROJECT_DIR$/templates/index_v07.html" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -164,10 +164,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="720" />
     <option name="y" value="23" />
-    <option name="width" value="720" />
-    <option name="height" value="797" />
+    <option name="width" value="2560" />
+    <option name="height" value="1337" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -194,6 +193,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,7 +228,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -616,14 +615,20 @@
       <option name="project" value="LOCAL" />
       <updated>1457319274502</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="display first name only (greeing)">
+      <created>1457342212485</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1457342212485</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="23" width="720" height="797" extended-state="0" />
+    <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.072222225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -671,7 +676,8 @@
     <MESSAGE value="adding datetime to oauth" />
     <MESSAGE value="adding email and name to print" />
     <MESSAGE value="updating admin title" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating admin title" />
+    <MESSAGE value="display first name only (greeing)" />
+    <option name="LAST_COMMIT_MESSAGE" value="display first name only (greeing)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -716,7 +722,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -804,7 +810,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -899,7 +905,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -994,7 +1000,7 @@
             <element signature="e#4792#5033#0" expanded="false" />
             <element signature="e#4846#5011#0" expanded="false" />
             <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -1119,45 +1125,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="86" selection-end-column="55" />
-          <folding>
-            <element signature="e#956#1259#0" expanded="false" />
-            <element signature="e#1301#1331#0" expanded="false" />
-            <element signature="e#1374#1412#0" expanded="false" />
-            <element signature="e#1486#1624#0" expanded="false" />
-            <element signature="e#1696#2234#0" expanded="false" />
-            <element signature="e#2528#2579#0" expanded="false" />
-            <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#2714#2851#0" expanded="false" />
-            <element signature="e#2913#2951#0" expanded="false" />
-            <element signature="e#3016#3145#0" expanded="false" />
-            <element signature="e#4317#4472#0" expanded="false" />
-            <element signature="e#4317#4411#1" expanded="false" />
-            <element signature="e#4499#4763#0" expanded="false" />
-            <element signature="e#4792#5033#0" expanded="false" />
-            <element signature="e#4846#5011#0" expanded="false" />
-            <element signature="e#5106#5142#0" expanded="false" />
-            <marker date="1457315245000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1184,19 +1156,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+    <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2916667">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="321" column="32" selection-start-line="321" selection-start-column="32" selection-end-line="321" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26348227">
-          <caret line="311" column="60" selection-start-line="311" selection-start-column="60" selection-end-line="311" selection-end-column="60" />
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.7647057">
+          <caret line="120" column="29" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41879636">
+          <caret line="141" column="53" selection-start-line="141" selection-start-column="53" selection-end-line="141" selection-end-column="53" />
+          <folding>
+            <element signature="e#956#1259#0" expanded="false" />
+            <element signature="e#1301#1331#0" expanded="false" />
+            <element signature="e#1374#1412#0" expanded="false" />
+            <element signature="e#1486#1624#0" expanded="false" />
+            <element signature="e#1696#2234#0" expanded="false" />
+            <element signature="e#2528#2579#0" expanded="false" />
+            <element signature="e#2623#2661#0" expanded="false" />
+            <element signature="e#2714#2851#0" expanded="false" />
+            <element signature="e#2913#2951#0" expanded="false" />
+            <element signature="e#3016#3145#0" expanded="false" />
+            <element signature="e#4317#4472#0" expanded="false" />
+            <element signature="e#4317#4411#1" expanded="false" />
+            <element signature="e#4499#4763#0" expanded="false" />
+            <element signature="e#4792#5033#0" expanded="false" />
+            <element signature="e#4846#5011#0" expanded="false" />
+            <element signature="e#5106#5142#0" expanded="false" />
+            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+          </folding>
         </state>
       </provider>
     </entry>
