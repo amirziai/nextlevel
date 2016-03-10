@@ -70,8 +70,6 @@ class FacebookSignIn(OAuthSignIn):
             with open('logins.log', 'a') as f:
                 f.write('%s,%s,%s\n' % (me.get('email'), name, timestamp()))
 
-            print 'Email: %s, name: %s' % (me.get('email'), name)
-
         except Exception, e:
             print 'error', e
 

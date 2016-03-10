@@ -96,12 +96,9 @@ def extract_from_json(json_, items):
 def index(version=None):
     if not current_user.is_anonymous:
         version = version if version else current_version
-        print version
         return render_template('index_v%s.html' % version)
     else:
         return render_template('login.html')
-
-
 
 
 @app.route('/privacy', methods=['GET'])
