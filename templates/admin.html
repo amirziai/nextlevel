@@ -9,18 +9,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <script type="text/javascript">
-        function calculateBelt(data) {
-            var topx = data.slice(0);
-            topx = topx.sort().slice(2); // take the top N scores
-            min = listMin(data);
+        function addTwoStripes(x) {
+            var stripe = Math.round(10 * (x - Math.floor(x)));
+            base = Math.round(x);
 
-            distance = (listMin(topx) - min).toFixed(2);
-            if (distance <= .8 & distance != 0.3) { // 2&2 satisfied
-                return listMin(topx);
+            if (stripe < 2) {
+                return x + 0.2;
             }
-            else {
-                return min;
+            else if (stripe == 2) {
+                return (1 + x)
             }
+            else if (stripe == 3) {
+                return (1 + x) + 0.1
+            }
+        }
+
+        function calculateBelt(data) {
+            var data_sorted = data.slice(0);
+            data_sorted = data_sorted.sort();
+            data_sorted[0] = addTwoStripes(data_sorted[0]);
+            data_sorted[1] = addTwoStripes(data_sorted[1]);
+
+            return listMin(data_sorted);
         }
 
         function listMin(list) {
