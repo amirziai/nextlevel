@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32a37e9a-d01d-4883-8bb9-e0f8069743d9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v01.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v02.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v03.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v04.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v05.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v06.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/index_v07.html" afterPath="$PROJECT_DIR$/templates/index_v08.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
@@ -35,8 +28,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3215909">
-              <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.3556818">
+              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding>
                 <element signature="e#956#1259#0" expanded="false" />
                 <element signature="e#1301#1331#0" expanded="false" />
@@ -45,17 +38,17 @@
                 <element signature="e#1696#2234#0" expanded="false" />
                 <element signature="e#2528#2579#0" expanded="false" />
                 <element signature="e#2623#2661#0" expanded="false" />
-                <element signature="e#3002#3040#0" expanded="false" />
-                <element signature="e#3105#3234#0" expanded="false" />
-                <element signature="e#3289#4358#0" expanded="false" />
-                <element signature="e#4406#4561#0" expanded="false" />
-                <element signature="e#4406#4500#1" expanded="false" />
-                <element signature="e#4588#4852#0" expanded="false" />
-                <element signature="e#4881#5122#0" expanded="false" />
-                <element signature="e#4935#5100#0" expanded="false" />
-                <element signature="e#5195#5231#0" expanded="false" />
-                <element signature="e#5314#5539#0" expanded="false" />
-                <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
+                <element signature="e#3070#3108#0" expanded="false" />
+                <element signature="e#3173#3302#0" expanded="false" />
+                <element signature="e#3357#4426#0" expanded="false" />
+                <element signature="e#4474#4629#0" expanded="false" />
+                <element signature="e#4474#4568#1" expanded="false" />
+                <element signature="e#4656#4920#0" expanded="false" />
+                <element signature="e#4949#5190#0" expanded="false" />
+                <element signature="e#5003#5168#0" expanded="false" />
+                <element signature="e#5263#5299#0" expanded="false" />
+                <element signature="e#5382#5607#0" expanded="false" />
+                <marker date="1457594396000" expanded="false" signature="5460:5479" placeholder="select * fro... users" />
               </folding>
             </state>
           </provider>
@@ -651,7 +644,19 @@
       <option name="project" value="LOCAL" />
       <updated>1457579908853</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="making root versioned">
+      <created>1457594026008</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1457594026008</updated>
+    </task>
+    <task id="LOCAL-00029" summary="making root versioned, un">
+      <created>1457594182074</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1457594182074</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -660,6 +665,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819384" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -669,7 +675,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -683,8 +688,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ignore .idea folder since it's not abundantly clearly" />
-    <MESSAGE value="previous levels always available to user for selection" />
     <MESSAGE value="highlighting the current score" />
     <MESSAGE value="add asterisk for movements with no score" />
     <MESSAGE value="changing pull to pulling" />
@@ -708,7 +711,9 @@
     <MESSAGE value="display first name only (greeing)" />
     <MESSAGE value="change email to nickname for admin" />
     <MESSAGE value="count total entries on admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="count total entries on admin" />
+    <MESSAGE value="making root versioned" />
+    <MESSAGE value="making root versioned, un" />
+    <option name="LAST_COMMIT_MESSAGE" value="making root versioned, un" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -736,17 +741,17 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#3002#3040#0" expanded="false" />
-            <element signature="e#3105#3234#0" expanded="false" />
-            <element signature="e#3289#4358#0" expanded="false" />
-            <element signature="e#4406#4561#0" expanded="false" />
-            <element signature="e#4406#4500#1" expanded="false" />
-            <element signature="e#4588#4852#0" expanded="false" />
-            <element signature="e#4881#5122#0" expanded="false" />
-            <element signature="e#4935#5100#0" expanded="false" />
-            <element signature="e#5195#5231#0" expanded="false" />
-            <element signature="e#5314#5539#0" expanded="false" />
-            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
+            <element signature="e#3070#3108#0" expanded="false" />
+            <element signature="e#3173#3302#0" expanded="false" />
+            <element signature="e#3357#4426#0" expanded="false" />
+            <element signature="e#4474#4629#0" expanded="false" />
+            <element signature="e#4474#4568#1" expanded="false" />
+            <element signature="e#4656#4920#0" expanded="false" />
+            <element signature="e#4949#5190#0" expanded="false" />
+            <element signature="e#5003#5168#0" expanded="false" />
+            <element signature="e#5263#5299#0" expanded="false" />
+            <element signature="e#5382#5607#0" expanded="false" />
+            <marker date="1457594396000" expanded="false" signature="5460:5479" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -824,17 +829,17 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#3002#3040#0" expanded="false" />
-            <element signature="e#3105#3234#0" expanded="false" />
-            <element signature="e#3289#4358#0" expanded="false" />
-            <element signature="e#4406#4561#0" expanded="false" />
-            <element signature="e#4406#4500#1" expanded="false" />
-            <element signature="e#4588#4852#0" expanded="false" />
-            <element signature="e#4881#5122#0" expanded="false" />
-            <element signature="e#4935#5100#0" expanded="false" />
-            <element signature="e#5195#5231#0" expanded="false" />
-            <element signature="e#5314#5539#0" expanded="false" />
-            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
+            <element signature="e#3070#3108#0" expanded="false" />
+            <element signature="e#3173#3302#0" expanded="false" />
+            <element signature="e#3357#4426#0" expanded="false" />
+            <element signature="e#4474#4629#0" expanded="false" />
+            <element signature="e#4474#4568#1" expanded="false" />
+            <element signature="e#4656#4920#0" expanded="false" />
+            <element signature="e#4949#5190#0" expanded="false" />
+            <element signature="e#5003#5168#0" expanded="false" />
+            <element signature="e#5263#5299#0" expanded="false" />
+            <element signature="e#5382#5607#0" expanded="false" />
+            <marker date="1457594396000" expanded="false" signature="5460:5479" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -919,17 +924,17 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#3002#3040#0" expanded="false" />
-            <element signature="e#3105#3234#0" expanded="false" />
-            <element signature="e#3289#4358#0" expanded="false" />
-            <element signature="e#4406#4561#0" expanded="false" />
-            <element signature="e#4406#4500#1" expanded="false" />
-            <element signature="e#4588#4852#0" expanded="false" />
-            <element signature="e#4881#5122#0" expanded="false" />
-            <element signature="e#4935#5100#0" expanded="false" />
-            <element signature="e#5195#5231#0" expanded="false" />
-            <element signature="e#5314#5539#0" expanded="false" />
-            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
+            <element signature="e#3070#3108#0" expanded="false" />
+            <element signature="e#3173#3302#0" expanded="false" />
+            <element signature="e#3357#4426#0" expanded="false" />
+            <element signature="e#4474#4629#0" expanded="false" />
+            <element signature="e#4474#4568#1" expanded="false" />
+            <element signature="e#4656#4920#0" expanded="false" />
+            <element signature="e#4949#5190#0" expanded="false" />
+            <element signature="e#5003#5168#0" expanded="false" />
+            <element signature="e#5263#5299#0" expanded="false" />
+            <element signature="e#5382#5607#0" expanded="false" />
+            <marker date="1457594396000" expanded="false" signature="5460:5479" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -1014,17 +1019,17 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#3002#3040#0" expanded="false" />
-            <element signature="e#3105#3234#0" expanded="false" />
-            <element signature="e#3289#4358#0" expanded="false" />
-            <element signature="e#4406#4561#0" expanded="false" />
-            <element signature="e#4406#4500#1" expanded="false" />
-            <element signature="e#4588#4852#0" expanded="false" />
-            <element signature="e#4881#5122#0" expanded="false" />
-            <element signature="e#4935#5100#0" expanded="false" />
-            <element signature="e#5195#5231#0" expanded="false" />
-            <element signature="e#5314#5539#0" expanded="false" />
-            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
+            <element signature="e#3070#3108#0" expanded="false" />
+            <element signature="e#3173#3302#0" expanded="false" />
+            <element signature="e#3357#4426#0" expanded="false" />
+            <element signature="e#4474#4629#0" expanded="false" />
+            <element signature="e#4474#4568#1" expanded="false" />
+            <element signature="e#4656#4920#0" expanded="false" />
+            <element signature="e#4949#5190#0" expanded="false" />
+            <element signature="e#5003#5168#0" expanded="false" />
+            <element signature="e#5263#5299#0" expanded="false" />
+            <element signature="e#5382#5607#0" expanded="false" />
+            <marker date="1457594396000" expanded="false" signature="5460:5479" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -1191,8 +1196,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3215909">
-          <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.3556818">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
             <element signature="e#956#1259#0" expanded="false" />
             <element signature="e#1301#1331#0" expanded="false" />
@@ -1201,17 +1206,17 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#3002#3040#0" expanded="false" />
-            <element signature="e#3105#3234#0" expanded="false" />
-            <element signature="e#3289#4358#0" expanded="false" />
-            <element signature="e#4406#4561#0" expanded="false" />
-            <element signature="e#4406#4500#1" expanded="false" />
-            <element signature="e#4588#4852#0" expanded="false" />
-            <element signature="e#4881#5122#0" expanded="false" />
-            <element signature="e#4935#5100#0" expanded="false" />
-            <element signature="e#5195#5231#0" expanded="false" />
-            <element signature="e#5314#5539#0" expanded="false" />
-            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
+            <element signature="e#3070#3108#0" expanded="false" />
+            <element signature="e#3173#3302#0" expanded="false" />
+            <element signature="e#3357#4426#0" expanded="false" />
+            <element signature="e#4474#4629#0" expanded="false" />
+            <element signature="e#4474#4568#1" expanded="false" />
+            <element signature="e#4656#4920#0" expanded="false" />
+            <element signature="e#4949#5190#0" expanded="false" />
+            <element signature="e#5003#5168#0" expanded="false" />
+            <element signature="e#5263#5299#0" expanded="false" />
+            <element signature="e#5382#5607#0" expanded="false" />
+            <marker date="1457594396000" expanded="false" signature="5460:5479" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
