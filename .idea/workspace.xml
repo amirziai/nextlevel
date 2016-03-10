@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="32a37e9a-d01d-4883-8bb9-e0f8069743d9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <ignored path="nextlevel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4056272">
-              <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.22977726">
+              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding>
                 <element signature="e#956#1259#0" expanded="false" />
                 <element signature="e#1301#1331#0" expanded="false" />
@@ -680,7 +679,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457595251675</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="root path problems x2">
+      <created>1457595341120</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1457595341120</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -712,7 +717,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="center aligning the logo" />
     <MESSAGE value="center aligning the logo, better" />
     <MESSAGE value="update pull to pulling in api" />
     <MESSAGE value="adding admin endpoint" />
@@ -737,7 +741,8 @@
     <MESSAGE value="updated flexibility options" />
     <MESSAGE value="updated flexibility options, correcting mistake" />
     <MESSAGE value="root path problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="root path problems" />
+    <MESSAGE value="root path problems x2" />
+    <option name="LAST_COMMIT_MESSAGE" value="root path problems x2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1215,8 +1220,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4056272">
-          <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.22977726">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
             <element signature="e#956#1259#0" expanded="false" />
             <element signature="e#1301#1331#0" expanded="false" />
