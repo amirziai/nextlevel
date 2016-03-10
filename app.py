@@ -91,15 +91,10 @@ def extract_from_json(json_, items):
     return [json_[item] for item in items]
 
 
-# @app.route('/', defaults={'version': None})
-# @app.route('/<version>', methods=['GET'])
 @app.route('/', methods=['GET'])
-# def index(version=None):
 def index():
     if not current_user.is_anonymous:
-        # version = version if version else current_version
-        version = current_version
-        return render_template('index_v%s.html' % version)
+        return render_template('index_v07.html')
     else:
         return render_template('login.html')
 
