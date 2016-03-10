@@ -4,14 +4,11 @@
 		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-		<!-- <script type="text/javascript" src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
-		<link rel="stylesheet" src="//cdn.datatables.net/1.10.9/css/jquery.dataTables.miƒn.css"> 
-		<link rel="stylesheet" src="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css"> -->
-
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 		<!-- data -->
 		<script src="options"></script>
@@ -72,7 +69,7 @@
 
 				score = score.toFixed(1);
 
-				data = {'user': 'test@test.com', 'movement': movement, 'score': score} // TODO: ID should be in session
+				data = {'movement': movement, 'score': score}
 
 				$.ajax({
 			        url: "/log",
@@ -121,7 +118,7 @@
 				7: 'black'
 			}
 
-			movements = ['Deadlift', 'Front Squat', 'Weightlifting', 'Upper Body Pull', 'Upper Body Pushing', 'Rings', 'Squat Endurance', 'Fran', 'Diane', 'Annie', 'Running', 'Kettlebell', 'Aerobic Power Intervals', 'Rowing', 'Flexibility'];
+			movements = ['Deadlift', 'Front Squat', 'Weightlifting', 'Upper Body Pulling', 'Upper Body Pushing', 'Rings', 'Squat Endurance', 'Fran', 'Diane', 'Annie', 'Running', 'Kettlebell', 'Aerobic Power Intervals', 'Rowing', 'Flexibility'];
 
 			function buildRow(row_text, score) {
 				score_int = Math.floor(score);
@@ -221,69 +218,49 @@
 				$("#tbl").append(x);
 			}
 
-			function buildEntry(gender, data) {
-				options_relevant = options[gender];
+			function buildEntry(data) {
+				options = [2.0, 2.1, 2.2, 2.3, 3.0, 3.1, 3.2, 3.3, 4.0, 4.1, 4.2, 4.3, 5.0, 5.1, 5.2, 5.3, 6.0, 6.1, 6.2, 6.3, 7.0];
 
 				for (var i=0; i < data.length; i++) {
 					movement = movements[i];
-					options_movement = options_relevant[movement];
 					score_movement = data[i];
 
-					title = null;
-					if (score_movement < 7) {
-						div = '<div class="panel panel-default"> \
-					    <div class="panel-heading" role="tab" id="heading' + i + '"> \
-					      <h4 class="panel-title"> \
-					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '">' + movement + '</a>';
+					// if (score_movement < 7) {
+                    div = '<div class="panel panel-default"> \
+                    <div class="panel-heading" role="tab" id="heading' + i + '"> \
+                      <h4 class="panel-title"> \
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '">' + movement + ((score_movement == 0) ? '*':'') + '</a>';
 
-						val = '<table class="table table-hover table-condensed table-striped"><thead><th>Level</th><th>Movement</th><th></th></thead><tbody>';
+                    val = '<table class="table table-hover table-condensed table-striped"><thead><th>Level</th><th></th></thead><tbody>';
 
-						trigger = false;
-						for (var opt=0; opt < options_movement.length; opt++) {
+                    trigger = false;
 
-							if (trigger == false) {
-								if ('belt' in options_movement[opt]) {
-									opt_score = options_movement[opt]['belt'];
+                    // different options for flexibility
+                    if (i == 14) {
+                        options = [2.2, 3.0, 3.2, 4.0, 4.2, 5.0, 6.0, 7.0];
+                    }
 
-									if (opt_score > score_movement) {
-										trigger = true;
-									}
-								}
-								else {
-									title = options_movement[opt]['title'];
-								}
-							}
-							else if (trigger == true) {
-								if (title != null) {
-									val += '<tr style="background-color:#ADD8E6"><td colspan="3">' + title + '</td></tr>';
-									title = null;
-								}
+                    for (var opt=0; opt < options.length; opt++) {
+                        opt_score = options[opt];
+                        // if (opt_score > score_movement) {
+                        bgcolor = (opt_score == score_movement) ? ' style="background-color: #add8e6"' : '';
+                        opt_int = parseInt(opt_score);
+                        opt_stripe = Math.round(10 * (opt_score - opt_int));
+                        level = belts[opt_int].capitalize() + (opt_stripe > 0 ? ' ' + opt_stripe : '');
+                        id = movement.toString().replace(' ', '').replace(' ', '') + '_' + opt_score.toString().replace('.', '_');
+                        val += '<tr' + bgcolor + '><td style="width:50%">' + level + '</td><td style="width:50%;text-align:right"><div id="select_' + id + '"><button type="button" class="btn btn-primary btn-sm" onclick="confirm(\'' + id + '\')">Select</button></div><div style="display: none;" id="confirm_' + id + '"><button class="btn btn-success btn-sm" onclick="submit(\'' + id + '\')" id="submit_btn_' + id + '">Submit</button>&nbsp;<button class="btn btn-danger btn-sm" onclick="cancel(\'' + id + '\')">Cancel</button></div></td></tr>';
+                        // }
+                    }
 
-								if ('title' in options_movement[opt]) {
-									val += '<tr style="background-color:#ADD8E6"><td colspan="3">' + options_movement[opt]['title'] + '</td></tr>';
-								}
-								else {
-									opt_score = options_movement[opt]['belt'];
-									opt_int = parseInt(opt_score);
-									opt_stripe = Math.round(10 * (opt_score - opt_int));
+                    div += '</h4> \
+                        </div> \
+                        <div id="collapse' + i + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + i + '"> \
+                          <div class="panel-body">' + val + '</div> \
+                        </div> \
+                      </div>';
 
-									level = belts[opt_int].capitalize() + (opt_stripe > 0 ? ' ' + opt_stripe : '');
-
-									id = movement.toString().replace(' ', '').replace(' ', '') + '_' + opt_score.toString().replace('.', '_');
-									val += '<tr><td style="width:20%">' + level + '</td><td style="width:60%">' + options_movement[opt]['value'] + '</td><td style="width:20%"><div id="select_' + id + '"><button type="button" class="btn btn-primary btn-sm" onclick="confirm(\'' + id + '\')">Select</button></div><div style="display: none;" id="confirm_' + id + '"><button class="btn btn-success btn-sm" onclick="submit(\'' + id + '\')" id="submit_btn_' + id + '">Submit</button>&nbsp;<button class="btn btn-danger btn-sm" onclick="cancel(\'' + id + '\')">Cancel</button></div></td></tr>';
-								}
-							}
-						}
-
-						div += '</h4> \
-						    </div> \
-						    <div id="collapse' + i + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + i + '"> \
-						      <div class="panel-body">' + val + '</div> \
-						    </div> \
-						  </div>';
-
-						  $("#accordion").append(div);	
-					}
+                      $("#accordion").append(div);
+					// }
 
 				}
 			}
@@ -326,35 +303,33 @@
 
 			function main_user_data() {
 				$.ajax({
-		            url: "/user/" + getParameterByName('user'),
+		            url: "/data",
 		            //url: "http://localhost:5000/user/" + getParameterByName('user'),
 		            type: "GET",
 		            dataType:'json',
 		            success: function(datax){
-		            	name = datax['user']['name'];
-		            	gender = datax['user']['gender'];
+		            	// name = datax['user']['name'];
+		            	// gender = datax['user']['gender'];
 
 		            	belt = 7
 		            	entry = 0
 
-		            	belt = listMin(datax['user']['data']);
-		            	entry = listMax(datax['user']['data']);
+		            	belt = listMin(datax);
+		            	entry = listMax(datax);
 
-		            	$("#name").text(name);
+		            	// $("#name").text(name);
 
-		            	colors = ['white', 'yellow', 'orange', 'blue', 'purple', 'brown', 'black'];
-
-		            	belt_current = calculateBelt(datax['user']['data']);
+		            	belt_current = calculateBelt(datax);
 
 		            	buildRow('Current level', belt_current);
 
-		            	for (var i=0; i < datax['user']['data'].length; i++) {
-		            		buildRow(movements[i], datax['user']['data'][i]);
+		            	for (var i=0; i < datax.length; i++) {
+		            		buildRow(movements[i], datax[i]);
 		            	}
 
-		            	buildRowNextLevel(datax['user']['data'], belt, entry);
+		            	buildRowNextLevel(datax, belt, entry);
 
-		            	buildEntry(gender, datax['user']['data']);
+		            	buildEntry(datax);
 		            }           
 		       });  
 			}
@@ -372,15 +347,19 @@
 			<br>
 			<br>
 			<div class="jumbotron">
-				<img src="http://nextlevelwp.buckplace.com/wp-content/uploads/2014/01/logonumber.png" style="width:350px">
+                <p style="text-align:center">
+                    <img src="http://i0.wp.com/www.levelmethodgym.com/wp-content/uploads/2014/01/levelMETHODgymLF.png?w=300">
+                </p>
 				<br>
 				<br>
 				<div id="step1">
-					<h1>Hello, <span id="name"></span>!</h1>
+					<h1>Hello, <span>{{ current_user.nickname.split(' ')[0] }}</span>!</h1>
 					<br>
 					<table style="border-spacing: 2px" id="tbl"></table>
 					<br>
 					<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="step(1)" id="btn_log">Log an entry</a></p>
+                    <br>
+                    <p><a href="{{ url_for('logout') }}">Logout</a></p>
 				</div>
 
 				<div id="step2" style="display: none">

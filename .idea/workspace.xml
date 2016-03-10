@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32a37e9a-d01d-4883-8bb9-e0f8069743d9" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v01.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v02.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v03.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v04.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v05.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index_v06.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_v07.html" afterPath="$PROJECT_DIR$/templates/index_v08.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin.html" afterPath="$PROJECT_DIR$/templates/admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
     </list>
     <ignored path="nextlevel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.3215909">
+              <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
               <folding>
                 <element signature="e#956#1259#0" expanded="false" />
                 <element signature="e#1301#1331#0" expanded="false" />
@@ -38,28 +45,37 @@
                 <element signature="e#1696#2234#0" expanded="false" />
                 <element signature="e#2528#2579#0" expanded="false" />
                 <element signature="e#2623#2661#0" expanded="false" />
-                <element signature="e#2714#2851#0" expanded="false" />
-                <element signature="e#2913#2951#0" expanded="false" />
-                <element signature="e#3016#3145#0" expanded="false" />
-                <element signature="e#3200#4269#0" expanded="false" />
-                <element signature="e#4317#4472#0" expanded="false" />
-                <element signature="e#4317#4411#1" expanded="false" />
-                <element signature="e#4499#4763#0" expanded="false" />
-                <element signature="e#4792#5033#0" expanded="false" />
-                <element signature="e#4846#5011#0" expanded="false" />
-                <element signature="e#5106#5142#0" expanded="false" />
-                <element signature="e#5225#5450#0" expanded="false" />
-                <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+                <element signature="e#3002#3040#0" expanded="false" />
+                <element signature="e#3105#3234#0" expanded="false" />
+                <element signature="e#3289#4358#0" expanded="false" />
+                <element signature="e#4406#4561#0" expanded="false" />
+                <element signature="e#4406#4500#1" expanded="false" />
+                <element signature="e#4588#4852#0" expanded="false" />
+                <element signature="e#4881#5122#0" expanded="false" />
+                <element signature="e#4935#5100#0" expanded="false" />
+                <element signature="e#5195#5231#0" expanded="false" />
+                <element signature="e#5314#5539#0" expanded="false" />
+                <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index_v08.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index_v08.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.5">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55128205">
-              <caret line="166" column="55" selection-start-line="166" selection-start-column="55" selection-end-line="166" selection-end-column="55" />
+            <state vertical-scroll-proportion="-93.125">
+              <caret line="149" column="40" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -155,8 +171,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/oauth.py" />
         <option value="$PROJECT_DIR$/templates/index_v07.html" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/admin.html" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -166,10 +182,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1920" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -196,6 +211,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -231,7 +247,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -630,17 +645,24 @@
       <option name="project" value="LOCAL" />
       <updated>1457569713697</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="count total entries on admin">
+      <created>1457579908853</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1457579908853</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="977" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819384" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4107143" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -653,7 +675,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -662,7 +683,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updating sqlite requirements" />
     <MESSAGE value="ignore .idea folder since it's not abundantly clearly" />
     <MESSAGE value="previous levels always available to user for selection" />
     <MESSAGE value="highlighting the current score" />
@@ -687,7 +707,8 @@
     <MESSAGE value="updating admin title" />
     <MESSAGE value="display first name only (greeing)" />
     <MESSAGE value="change email to nickname for admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="change email to nickname for admin" />
+    <MESSAGE value="count total entries on admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="count total entries on admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -696,14 +717,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/index_v07.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -723,18 +736,17 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#2714#2851#0" expanded="false" />
-            <element signature="e#2913#2951#0" expanded="false" />
-            <element signature="e#3016#3145#0" expanded="false" />
-            <element signature="e#3200#4269#0" expanded="false" />
-            <element signature="e#4317#4472#0" expanded="false" />
-            <element signature="e#4317#4411#1" expanded="false" />
-            <element signature="e#4499#4763#0" expanded="false" />
-            <element signature="e#4792#5033#0" expanded="false" />
-            <element signature="e#4846#5011#0" expanded="false" />
-            <element signature="e#5106#5142#0" expanded="false" />
-            <element signature="e#5225#5450#0" expanded="false" />
-            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+            <element signature="e#3002#3040#0" expanded="false" />
+            <element signature="e#3105#3234#0" expanded="false" />
+            <element signature="e#3289#4358#0" expanded="false" />
+            <element signature="e#4406#4561#0" expanded="false" />
+            <element signature="e#4406#4500#1" expanded="false" />
+            <element signature="e#4588#4852#0" expanded="false" />
+            <element signature="e#4881#5122#0" expanded="false" />
+            <element signature="e#4935#5100#0" expanded="false" />
+            <element signature="e#5195#5231#0" expanded="false" />
+            <element signature="e#5314#5539#0" expanded="false" />
+            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -812,18 +824,17 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#2714#2851#0" expanded="false" />
-            <element signature="e#2913#2951#0" expanded="false" />
-            <element signature="e#3016#3145#0" expanded="false" />
-            <element signature="e#3200#4269#0" expanded="false" />
-            <element signature="e#4317#4472#0" expanded="false" />
-            <element signature="e#4317#4411#1" expanded="false" />
-            <element signature="e#4499#4763#0" expanded="false" />
-            <element signature="e#4792#5033#0" expanded="false" />
-            <element signature="e#4846#5011#0" expanded="false" />
-            <element signature="e#5106#5142#0" expanded="false" />
-            <element signature="e#5225#5450#0" expanded="false" />
-            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+            <element signature="e#3002#3040#0" expanded="false" />
+            <element signature="e#3105#3234#0" expanded="false" />
+            <element signature="e#3289#4358#0" expanded="false" />
+            <element signature="e#4406#4561#0" expanded="false" />
+            <element signature="e#4406#4500#1" expanded="false" />
+            <element signature="e#4588#4852#0" expanded="false" />
+            <element signature="e#4881#5122#0" expanded="false" />
+            <element signature="e#4935#5100#0" expanded="false" />
+            <element signature="e#5195#5231#0" expanded="false" />
+            <element signature="e#5314#5539#0" expanded="false" />
+            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -908,18 +919,17 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#2714#2851#0" expanded="false" />
-            <element signature="e#2913#2951#0" expanded="false" />
-            <element signature="e#3016#3145#0" expanded="false" />
-            <element signature="e#3200#4269#0" expanded="false" />
-            <element signature="e#4317#4472#0" expanded="false" />
-            <element signature="e#4317#4411#1" expanded="false" />
-            <element signature="e#4499#4763#0" expanded="false" />
-            <element signature="e#4792#5033#0" expanded="false" />
-            <element signature="e#4846#5011#0" expanded="false" />
-            <element signature="e#5106#5142#0" expanded="false" />
-            <element signature="e#5225#5450#0" expanded="false" />
-            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+            <element signature="e#3002#3040#0" expanded="false" />
+            <element signature="e#3105#3234#0" expanded="false" />
+            <element signature="e#3289#4358#0" expanded="false" />
+            <element signature="e#4406#4561#0" expanded="false" />
+            <element signature="e#4406#4500#1" expanded="false" />
+            <element signature="e#4588#4852#0" expanded="false" />
+            <element signature="e#4881#5122#0" expanded="false" />
+            <element signature="e#4935#5100#0" expanded="false" />
+            <element signature="e#5195#5231#0" expanded="false" />
+            <element signature="e#5314#5539#0" expanded="false" />
+            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -1004,18 +1014,17 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#2714#2851#0" expanded="false" />
-            <element signature="e#2913#2951#0" expanded="false" />
-            <element signature="e#3016#3145#0" expanded="false" />
-            <element signature="e#3200#4269#0" expanded="false" />
-            <element signature="e#4317#4472#0" expanded="false" />
-            <element signature="e#4317#4411#1" expanded="false" />
-            <element signature="e#4499#4763#0" expanded="false" />
-            <element signature="e#4792#5033#0" expanded="false" />
-            <element signature="e#4846#5011#0" expanded="false" />
-            <element signature="e#5106#5142#0" expanded="false" />
-            <element signature="e#5225#5450#0" expanded="false" />
-            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+            <element signature="e#3002#3040#0" expanded="false" />
+            <element signature="e#3105#3234#0" expanded="false" />
+            <element signature="e#3289#4358#0" expanded="false" />
+            <element signature="e#4406#4561#0" expanded="false" />
+            <element signature="e#4406#4500#1" expanded="false" />
+            <element signature="e#4588#4852#0" expanded="false" />
+            <element signature="e#4881#5122#0" expanded="false" />
+            <element signature="e#4935#5100#0" expanded="false" />
+            <element signature="e#5195#5231#0" expanded="false" />
+            <element signature="e#5314#5539#0" expanded="false" />
+            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -1085,27 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index_v01.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index_v03.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index_v07.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7021028">
-          <caret line="353" column="131" selection-start-line="353" selection-start-column="131" selection-end-line="353" selection-end-column="131" />
         </state>
       </provider>
     </entry>
@@ -1185,10 +1173,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-93.125">
+          <caret line="149" column="40" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index_v08.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.3215909">
+          <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
           <folding>
             <element signature="e#956#1259#0" expanded="false" />
             <element signature="e#1301#1331#0" expanded="false" />
@@ -1197,27 +1201,18 @@
             <element signature="e#1696#2234#0" expanded="false" />
             <element signature="e#2528#2579#0" expanded="false" />
             <element signature="e#2623#2661#0" expanded="false" />
-            <element signature="e#2714#2851#0" expanded="false" />
-            <element signature="e#2913#2951#0" expanded="false" />
-            <element signature="e#3016#3145#0" expanded="false" />
-            <element signature="e#3200#4269#0" expanded="false" />
-            <element signature="e#4317#4472#0" expanded="false" />
-            <element signature="e#4317#4411#1" expanded="false" />
-            <element signature="e#4499#4763#0" expanded="false" />
-            <element signature="e#4792#5033#0" expanded="false" />
-            <element signature="e#4846#5011#0" expanded="false" />
-            <element signature="e#5106#5142#0" expanded="false" />
-            <element signature="e#5225#5450#0" expanded="false" />
-            <marker date="1457569662000" expanded="false" signature="5303:5322" placeholder="select * fro... users" />
+            <element signature="e#3002#3040#0" expanded="false" />
+            <element signature="e#3105#3234#0" expanded="false" />
+            <element signature="e#3289#4358#0" expanded="false" />
+            <element signature="e#4406#4561#0" expanded="false" />
+            <element signature="e#4406#4500#1" expanded="false" />
+            <element signature="e#4588#4852#0" expanded="false" />
+            <element signature="e#4881#5122#0" expanded="false" />
+            <element signature="e#4935#5100#0" expanded="false" />
+            <element signature="e#5195#5231#0" expanded="false" />
+            <element signature="e#5314#5539#0" expanded="false" />
+            <marker date="1457594010000" expanded="false" signature="5392:5411" placeholder="select * fro... users" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55128205">
-          <caret line="166" column="55" selection-start-line="166" selection-start-column="55" selection-end-line="166" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
