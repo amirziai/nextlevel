@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="32a37e9a-d01d-4883-8bb9-e0f8069743d9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin.html" afterPath="$PROJECT_DIR$/templates/admin.html" />
     </list>
     <ignored path="nextlevel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,20 +53,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_v08.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index_v08.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index_v08.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2352943">
-              <caret line="258" column="30" selection-start-line="258" selection-start-column="30" selection-end-line="258" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.3872135">
+              <caret line="115" column="46" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28037384">
+            <state vertical-scroll-proportion="-10.0">
               <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
@@ -704,7 +703,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457596847640</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="updating rule of 2s for admin">
+      <created>1457597079189</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1457597079189</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -736,7 +741,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ignore xml" />
     <MESSAGE value="adding admin endpoint, adding name to captured data from fb" />
     <MESSAGE value="adding name to fb query" />
     <MESSAGE value="adding name to fb query, printing" />
@@ -761,7 +765,8 @@
     <MESSAGE value="back to square one" />
     <MESSAGE value="adding back version to root view" />
     <MESSAGE value="adding new rule of 2s" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding new rule of 2s" />
+    <MESSAGE value="updating rule of 2s for admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating rule of 2s for admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1248,18 +1253,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index_v08.html">
+    <entry file="file://$PROJECT_DIR$/templates/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2352943">
-          <caret line="258" column="30" selection-start-line="258" selection-start-column="30" selection-end-line="258" selection-end-column="30" />
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+    <entry file="file://$PROJECT_DIR$/templates/index_v08.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28037384">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.3872135">
+          <caret line="115" column="46" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
           <folding />
         </state>
       </provider>

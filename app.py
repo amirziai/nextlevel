@@ -11,7 +11,7 @@ import ast
 from functools import wraps
 
 # flask app
-current_version = '07'
+current_version = '08'
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'F!12Z@r47j\3yXm J xu&R~>X@H!j<<mM]Lwf/,?KXTxQ!'
 app.config['MONGO_URI'] = '127.0.0.1:27017'
